@@ -6,11 +6,100 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!-- CSS Global Compulsory -->
+    <%= stylesheet_link_tag    'bootstrap.min.css'%>
+    <%= stylesheet_link_tag    'style.css'%>
+
+    <!-- CSS Implementing Plugins -->
+    <%= stylesheet_link_tag    'font-awesome.min.css'%>
+    <%= stylesheet_link_tag    'ionicons.min.css'%>
+    <%= stylesheet_link_tag    'animate.min.css'%>
+    <%= stylesheet_link_tag    'flexslider.css'%>
+    <%= stylesheet_link_tag    'owl.carousel.css'%>
+    <%= stylesheet_link_tag    'owl.theme.css'%>
+    <%= stylesheet_link_tag    'vegas.min.css'%>
+    <%= stylesheet_link_tag    'menu.css'%>
+    <%= stylesheet_link_tag    'sidebar.css'%>
+
+    <!-- Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,700italic,400,300,700&amp;subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
+
+
+    <!-- JS -->
+    <%= javascript_include_tag 'modernizr.js' %>
+    <%= javascript_include_tag 'snap.svg-min.js' %>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <script src="http://webnextbd.net/demo/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if lt IE 11]>
+    <link rel="stylesheet" type="text/css" href="http://webnextbd.net/demo/css/ie.css">
+    <![endif]-->
   </head>
 
-  <body>
+  <body class="image-background">
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-    <%= yield %>
+
+    <!-- container -->
+    <div class="containers">
+
+      <!-- menu -->
+      <nav id="menu" class="menu">
+        <button class="menu__handle"><span>Menu</span></button>
+        <div class="menu__inner">
+          <ul>
+            <li><a href="/"><i class="fa fa-fw fa-home"></i><span>Home</span></a></li>
+            <li><a href=""><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
+            <% if user_signed_in? %>
+            <li><a href="<%= edit_user_registration_path %>"><i class="fa fa-fw fa-info"></i><span>Profile</span></a></li>
+            <li><a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-fw fa-sign-out"></i><span>Logout</span></a></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="morph-shape" data-morph-open="M300-10c0,0,295,164,295,410c0,232-295,410-295,410" data-morph-close="M300-10C300-10,5,154,5,400c0,232,295,410,295,410">
+          <svg width="100%" height="100%" viewBox="0 0 600 800" preserveAspectRatio="none">
+            <path fill="none" d="M300-10c0,0,0,164,0,410c0,232,0,410,0,410"/>
+          </svg>
+        </div>
+      </nav>
+      <!-- /menu -->
+
+      <%= yield %>
+
+      <!-- copyright -->
+      <footer class="copy-right animated bounceInUp" data-animation-delay="700">
+        <div class="copyright">
+          © 2016 <a href="http://templatestock.co">Kenigbolo Meya Stephen</a> - All Rights Reserved
+        </div>
+      </footer>
+      <!-- /copyright -->
+
+    </div>
+    <!-- /container -->
+
+    <!-- JS -->
+    <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
+    <%= javascript_include_tag 'bootstrap.min.js' %>
+    <%= javascript_include_tag 'retina.min.js' %>
+    <%= javascript_include_tag 'jquery.backstretch.min.js' %>
+    <%= javascript_include_tag 'jquery.countdown.min.js' %>
+    <%= javascript_include_tag 'jquery.parallaxify.min.js' %>
+    <%= javascript_include_tag 'jquery.particleground.min.js' %>
+    <%= javascript_include_tag 'vegas.min.js' %>
+    <%= javascript_include_tag 'trianglify.min.js' %>
+    <%= javascript_include_tag 'jquery.mb.YTPlayer.js' %>
+    <%= javascript_include_tag 'jquery.nicescroll.min.js' %>
+    <%= javascript_include_tag 'jquery.flexslider-min.js' %>
+    <%= javascript_include_tag 'owl.carousel.min.js' %>
+    <%= javascript_include_tag 'jquery.appear.js' %>
+    <%= javascript_include_tag 'classie.js' %>
+    <%= javascript_include_tag 'sidebar.js' %>
+    <%= javascript_include_tag 'main.js' %>
+    <!-- /JS -->
   </body>
 </html>
