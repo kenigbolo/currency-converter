@@ -10,6 +10,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'rubocop', require: false
+gem 'omniauth'
+gem 'omniauth-github'
 
 group :development, :test do
   gem 'byebug', platform: :mri
