@@ -47,12 +47,26 @@
 												<!-- section page -->
 												<div class="section-page" id="signup">
 													<% unless user_signed_in? %>
-													<form class="sign-up-sign-in-form" method="post" id="mc-form">
-														<a href="<%= new_user_registration_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Register</button></a>
-														<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
-													</form>
+														<form class="sign-up-sign-in-form" method="post" id="mc-form">
+															<a href="<%= new_user_registration_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Register</button></a>
+															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
+														</form>
 													<% else %>
-													 RENDER CURRENCY SEARCH FORM
+														<%= form_for :calculation,  url: calculations_path, html: {class: "form-inline" } do |f| %>
+
+														<!--  Amount -->
+														 <div class="form-group">
+															<label class="sr-only" for="exampleInputAmount">Amount</label>
+															<div class="input-group">
+																<div class="input-group-addon"></div>
+																<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+															</div>
+														</div>
+														<!--  !Amount -->
+														<!--  Submit -->
+														<button type="submit" class="btn btn-primary">Calculate</button>
+														<!--  !Submit -->
+														<% end %>
 													<% end %>
 													<p class="message-error"></p>
 													<p class="message-success"></p>
