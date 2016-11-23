@@ -1,5 +1,11 @@
 class HomeController < ApplicationController
 	def index
-		@calculation = Calculation.new
 	end
+
+	def edit
+    @calculation = current_user.calculations.find(params[:id])
+    unless current_user == @calculation.user
+      redirect_back(fallback_location: root_path)
+    end
+  end
 end
