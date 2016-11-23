@@ -52,24 +52,44 @@
 															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
 														</form>
 													<% else %>
+														<!--  Exchange Form-->
 														<%= form_for :calculation,  url: calculations_path, html: {class: "form-inline" } do |f| %>
+															<!--  Base Currency-->
+															<div class="form-group">
+															 <label class="btn btn-primary">From</label>
+																 <%= f.collection_select :base_currency, Currency.all, :name, :name, {selected: "EUR"}, {class: 'form-control currency-select'} %>
+														 	</div>
+														 <!--  !Base Currency -->
 
-														<!--  Amount -->
+														 <!--  Conversion Currency-->
 														 <div class="form-group">
-															<label class="sr-only" for="exampleInputAmount">Amount</label>
-															<div class="input-group">
-																<div class="input-group-addon"></div>
-																<input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+															<label class="btn btn-primary">To</label>
+																<%= f.collection_select :conversion_currency, Currency.all, :name, :name, {}, {class: 'form-control currency-select'} %>
+														 </div>
+														<!--  !Conversion Currency -->
+
+															<!--  Amount -->
+															 <div class="form-group">
+																<label class="btn btn-primary">Amount</label>
+																	<%= f.number_field :amount, class: "form-control btn" %>
+															 </div>
+															<!--  !Amount -->
+
+															<!--  Number of Days -->
+															 <div class="form-group">
+																<label class="btn btn-primary">Days</label>
+																	<%= f.number_field :num_of_days, in: 1..250, class: "form-control btn" %>
 															</div>
-														</div>
-														<!--  !Amount -->
-														<!--  Submit -->
-														<button type="submit" class="btn btn-primary">Calculate</button>
-														<!--  !Submit -->
+															<!--  !Number of Days -->
+
+															<!--  Submit -->
+															<div class="form-group">
+																 <%= f.submit "Calculate", class: "btn btn-primary"%>
+														  </div>
+															<!--  !Submit -->
 														<% end %>
+														<!--  !Exchange form-->
 													<% end %>
-													<p class="message-error"></p>
-													<p class="message-success"></p>
 												</div>
 												<!-- /section page -->
 											</div>
@@ -80,10 +100,10 @@
 										<!-- socials icons -->
 										<nav class="socials-icons animated bounceInUp" data-animation-delay="700">
 											<ul>
-												<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-												<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-												<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-												<li><a href="#"><i class="ion-social-linkedin"></i></a></li>
+												<li><a href="https://www.facebook.com/kenigbolo.meyastephen"><i class="ion-social-facebook"></i></a></li>
+												<li><a href="http://www.twitter.com/expensivestevie"><i class="ion-social-twitter"></i></a></li>
+												<li><a href="https://plus.google.com/u/0/104900543322717492050"><i class="ion-social-googleplus"></i></a></li>
+												<li><a href="http://ee.linkedin.com/in/kenigbolo"><i class="ion-social-linkedin"></i></a></li>
 											</ul>
 										</nav>
 										<!-- /socials icons -->
