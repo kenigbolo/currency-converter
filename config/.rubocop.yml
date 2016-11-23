@@ -3,3 +3,6 @@ AllCops:
     - 'db/**/*'
     - 'config/**/*'
     - 'script/**/*'
+# Customize rules
+Metrics/LineLength:
+  Max: 150
