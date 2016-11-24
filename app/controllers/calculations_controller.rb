@@ -11,13 +11,14 @@ class CalculationsController < ApplicationController
       flash['notice'] = "You cannot convert from #{base} to #{conversion}"
       redirect_back(fallback_location: root_path)
     else
-      calc_to_convert = save_calculation(calculation_params)
-      @change_rate = helpers.conversion(calc_to_convert)
-      # flash['notice'] = "#{change_rate}"
+      @calculation = save_calculation(calculation_params)
+      @change_rate = helpers.conversion(@calculation)
       render 'show'
-
-      # redirect_back(fallback_location: root_path)
     end
+  end
+
+  def show
+    @calculation = Calculation.find_by(id: params[:id])
   end
 
   def destroy

@@ -1,5 +1,75 @@
-<!-- Overlay -->
-<div id="section-home" class="home-section-wrap center">
-	<div class="section-overlay"></div>
+<div class="section-overlay-modify">
+  <!-- main -->
+  <div class="main">
+  	<!-- header -->
+  	<header class="header-site">
+  		<div class="logo-site animated bounceInDown" data-animation-delay="700">
+  			<h1> Meya Currency Predictor </h1>
+  		</div>
+  	</header>
+  	<!-- /header -->
+
+  	<!-- section -->
+  	<section class="section fullscreen site-main">
+  		<div class="container-section">
+  				<div class="container-table">
+  					<div class="content-table">
+  					<!-- bt-carousel -->
+  					<div class="bt-carousel">
+
+  						<!-- home section -->
+  						<div class="item-slide show">
+  							<!-- container -->
+  							<div class="container">
+  								<div class="row">
+  									<div class="col-md-10 col-md-offset-1">
+
+  									<!-- content slide -->
+  									<div class="content-slide">
+  										<!-- Clock Countdown -->
+  										<!-- <div id="clock-countdown" class="animated bounceInDown" data-animation-delay="700"></div> -->
+  										<h3 class="color-white top-margin animated bounceInDown" data-animation-delay="700" >We provide you the best currency exchange prediction service</h3>
+                      <br>
+                      <h4 class="color-white top-margin animated bounceInDown" data-animation-delay="700" ><strong><%= @calculation.num_of_days%> Day(s) Conversion for
+                        <%= @calculation.amount %> | <%=@calculation.base_currency%> to <%= @calculation.conversion_currency %></strong></h4>
+
+  										<!-- Subscribe Form -->
+  										<div class="form animated bounceInUp" data-animation-delay="700">
+  											<!-- container form -->
+  											<div class="container-form">
+  												<!-- section page -->
+  												<div class="section-page" id="signup">
+  													<% unless user_signed_in? %>
+  														<form class="sign-up-sign-in-form" method="post" id="mc-form">
+  															<a href="<%= new_user_registration_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Register</button></a>
+  															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
+  														</form>
+  													<% else %>
+                              <%= pie_chart({"Football" => 10, "Basketball" => 5}) %>
+  													<% end %>
+  												</div>
+  												<!-- /section page -->
+  											</div>
+  											<!-- /container form -->
+  										</div>
+  										<!-- /Subscribe Form -->
+
+  									</div><!-- /content slide -->
+  									</div>
+  								</div>
+  								<!-- /row -->
+  							</div>
+  							<!-- /container -->
+  						</div>
+  						<!-- /home section -->
+
+  					</div>
+  					<!-- /bt-carousel -->
+  				</div>
+  			</div>
+  		</div>
+  	</section>
+  	<!-- /section -->
+  </div>
+  <!-- /main -->
 </div>
-<!-- /Overlay -->
