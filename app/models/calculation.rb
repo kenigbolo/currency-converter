@@ -17,11 +17,11 @@ class Calculation < ApplicationRecord
     self
   end
   def get_previous!
-    response = HTTParty.get("http://api.fixer.io/#{DEFAULT_DATE}?base=#{self.base_currency}")
+    response = HTTParty.get("http://localhost:8080/#{DEFAULT_DATE}?base=#{self.base_currency}")
     return response.body
   end
   def get_current!
-    response = HTTParty.get("http://api.fixer.io/latest?base=#{self.base_currency}")
+    response = HTTParty.get("http://localhost:8080/latest?base=#{self.base_currency}")
     return response.body
   end
 end
