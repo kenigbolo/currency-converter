@@ -1545,8 +1545,8 @@ body.mobile .animated {
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-	background: linear-gradient(270deg, #67ddbf, #677edd, #965699);
-	background-size: 600% 600%;
+	background: linear-gradient(11deg, #3ed9b1, #2a8a8a, #36dcdd, #3692dd);
+	background-size: 800% 800%;
 
 	-webkit-animation: AnimationName 30s ease infinite;
 	-moz-animation: AnimationName 30s ease infinite;
