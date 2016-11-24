@@ -42,6 +42,8 @@
   </head>
 
   <body class="image-background">
+    <!--  Wrapper -->
+    <div id="wrapper">
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
@@ -68,20 +70,23 @@
         </div>
       </nav>
       <!-- /menu -->
-
+      <div id="content">
       <%= yield %>
-
+      </div>
       <!-- copyright -->
+      <div id="footer">
       <footer class="copy-right animated bounceInUp" data-animation-delay="700">
         <div class="copyright">
           © 2016 <a href="http://templatestock.co">Kenigbolo Meya Stephen</a> - All Rights Reserved
         </div>
       </footer>
+    </div>
       <!-- /copyright -->
 
     </div>
     <!-- /container -->
-
+    </div>
+    <!--  /wrapper -->
     <!-- JS -->
     <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
     <%= javascript_include_tag 'bootstrap.min.js' %>

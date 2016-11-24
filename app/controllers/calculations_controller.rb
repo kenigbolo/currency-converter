@@ -12,9 +12,11 @@ class CalculationsController < ApplicationController
       redirect_back(fallback_location: root_path)
     else
       calc_to_convert = save_calculation(calculation_params)
-      change_rate = helpers.conversion(calc_to_convert)
-      flash['notice'] = "#{change_rate}"
-      redirect_back(fallback_location: root_path)
+      @change_rate = helpers.conversion(calc_to_convert)
+      # flash['notice'] = "#{change_rate}"
+      render 'show'
+
+      # redirect_back(fallback_location: root_path)
     end
   end
 
