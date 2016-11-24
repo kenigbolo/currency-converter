@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+/*==========================================
+ Use Javascript to disable Calculate button
+============================================*/
+$( document ).ready(function() {
+    $('input').keyup(function() {
+
+        var empty = false;
+        $('input').each(function() {
+            if ($(this).val() == '') {
+                empty = true;
+            }
+        });
+
+        if (empty) {
+            $('#calculate').attr('disabled', 'disabled');
+        } else {
+            $('#calculate').removeAttr('disabled');
+        }
+    });
+})()
