@@ -1,7 +1,6 @@
 class CalculationsController < ApplicationController
   before_action :authenticate_user!, except: :index
   def index
-    @calculation = Calculation.new
   end
 
   def create
@@ -11,14 +10,15 @@ class CalculationsController < ApplicationController
       flash['notice'] = "You cannot convert from #{base} to #{conversion}"
       redirect_back(fallback_location: root_path)
     else
-      @calculation = save_calculation(calculation_params)
-      @change_rate = helpers.conversion(@calculation)
-      render 'show'
+      calculation = save_calculation(calculation_params)
+      helpers.get_result(calculation)
+      redirect_to calculation_url(calculation)
     end
   end
 
   def show
     @calculation = Calculation.find_by(id: params[:id])
+    @result = Result.find_by(calculation_id: @calculation.id)
   end
 
   def destroy
