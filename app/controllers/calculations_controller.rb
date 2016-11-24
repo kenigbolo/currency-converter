@@ -81,7 +81,7 @@ class CalculationsController < ApplicationController
   end
   def current_rate(base, calc_to_convert)
     RATES.each do |rate|
-      if rate['base'] == base && rate['date'] == Date.today.to_s
+      if rate[:base] == base && rate[:date] == Date.today.to_s
         return rate
       else
         current = calc_to_convert.get_current!
@@ -92,7 +92,7 @@ class CalculationsController < ApplicationController
   end
   def previous_rate(base, calc_to_convert)
     RATES.each do |rate|
-      if rate['base'] == base && rate['date'] == Calculation::DEFAULT_DATE
+      if rate[:base] == base && rate[:date] == Calculation::DEFAULT_DATE
         return rate
       else
         previous = calc_to_convert.get_previous!
