@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 20161124134333) do
     t.string   "base_currency"
     t.string   "conversion_currency"
     t.float    "amount"
+    t.float    "current_rate"
     t.integer  "num_of_days"
     t.integer  "user_id"
     t.datetime "created_at",          null: false

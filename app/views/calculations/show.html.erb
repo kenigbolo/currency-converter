@@ -41,10 +41,11 @@
   															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
   														</form>
   													<% else %>
-                              <%= area_chart @result.value %>
+                              <%= column_chart @result.value %>
+                              <br>
                               <!-- Button trigger modal -->
                               <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#summary-table">
-                                View Full Prediction Table
+                                View Full Table
                               </button>
   													<% end %>
   												</div>
@@ -62,27 +63,18 @@
                             </tr>
                           </thead>
                           <tbody>
-                            <tr>
-                              <th scope="row">1</th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                            </tr>
-                            <tr>
-                              <th scope="row">2</th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                            </tr>
-                            <tr>
-                              <th scope="row">3</th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                              <th scope="row"></th>
-                            </tr>
+                            <% @top_three.each do |result|%>
+                              <tr>
+                                <th scope="row"><%= @top_three.index(result) + 1%></th>
+                                <th scope="row"><%= result.first %>     | Week <%= week_number(result.first)%></th>
+                                <!-- current_rate + value -->
+                                <th scope="row"><%= exchange_rate(@calculation, result)%></th>
+                                <!-- exchange_rate * amount -->
+                                <th scope="row"><%= exchange_total_amount(@calculation, result) %></th>
+                                <!-- (predicted_rate * amount) - (today_rate * amount) -->
+                                <th scope="row"><%= profit_loss(@calculation, result) %></th>
+                              </tr>
+                            <% end %>
                           </tbody>
                         </table>
   										</div>
@@ -107,22 +99,4 @@
   </div>
   <!-- /main -->
 </div>
-<!-- Modal -->
-<div class="modal fade" id="summary-table" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-      </div>
-    </div>
-  </div>
-</div>
+<%= render 'full_list'%>

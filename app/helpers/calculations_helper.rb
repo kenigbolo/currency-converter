@@ -1,7 +1,8 @@
 module CalculationsHelper
-  RATES = []
   def get_result(calc_to_convert)
     today_value = rate_today(calc_to_convert)
+    calc_to_convert.current_rate = today_value
+    calc_to_convert.save!
     value = calculate_result(calc_to_convert, today_value)
     Result.create!(value: value, calculation_id: calc_to_convert.id)
   end
@@ -10,11 +11,11 @@ module CalculationsHelper
     days = calc_to_convert.weeks!
     daily_value = today_value
     count = 1
-    value = {"" => 0, (Date.today.to_s + " today") => change_rate}
+    value = {(Date.today.to_s) => today_value}
     (count..days).each do |daily_rate|
       if ((daily_rate % Calculation::WEEK) == 0)
-        # Add a Standard random value deviation using international -1.0 to 2.9 change rate in currency forecasting
-        daily_value += (change_rate + rand(-1.0..2.9))
+        # Add a Standard random value deviation using international -0.5 to 1.0 change rate in currency forecasting
+        daily_value += (change_rate + rand(-0.5..1.0))
         value[(Date.today + daily_rate).to_s] = daily_value
         count += 1
       end
@@ -51,7 +52,7 @@ module CalculationsHelper
   # Helpers for current rate
   def check_current_rate(calc_to_convert)
     base = calc_to_convert.base_currency
-    if RATES.empty?
+    if Calculation::RATES.empty?
       return current(calc_to_convert)
     else
       return current_rate(base, calc_to_convert)
@@ -59,11 +60,11 @@ module CalculationsHelper
   end
   def current(calc_to_convert)
     current = eval(calc_to_convert.get_current!)
-    RATES.push(current)
+    Calculation::RATES.push(current)
     return current
   end
   def current_rate(base, calc_to_convert)
-    RATES.each do |rate|
+    Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Date.today.to_s
         return rate
       else
@@ -75,7 +76,7 @@ module CalculationsHelper
   # Helpers for previous rates
   def check_previous_rate(calc_to_convert)
     base = calc_to_convert.base_currency
-    if RATES.empty?
+    if Calculation::RATES.empty?
       return previous(calc_to_convert)
     else
       return previous_rate(base, calc_to_convert)
@@ -83,16 +84,30 @@ module CalculationsHelper
   end
   def previous(calc_to_convert)
     previous = eval(calc_to_convert.get_previous!)
-    RATES.push(previous)
+    Calculation::RATES.push(previous)
     return previous
   end
   def previous_rate(base, calc_to_convert)
-    RATES.each do |rate|
+    Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Calculation::DEFAULT_DATE
         return rate
       else
         return previous(calc_to_convert)
       end
     end
+  end
+  # Helpers for calculation view
+  def exchange_rate (calculation, result)
+    if result.class == Array
+      return (calculation.current_rate + result.second ).round(4)
+    else
+      return (calculation.current_rate + result).round(4)
+    end
+  end
+  def exchange_total_amount(calculation, result)
+    return (exchange_rate(calculation, result) * calculation.amount).round(4)
+  end
+  def profit_loss(calculation, result)
+    return (exchange_total_amount(calculation, result) - (calculation.current_rate * calculation.amount)).round(2)
   end
 end
