@@ -1,6 +1,19 @@
 <% if user_signed_in? %>
   <!--  Exchange Form-->
-  <%= form_for :calculation,  url: calculations_path, html: {class: "form-inline" } do |f| %>
+  <%= form_for @calculation,  url: calculations_path, html: {class: "form-inline" } do |f| %>
+    <% if @calculation.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@calculation.errors.count, "error") %> prohibited
+          this address from being saved:
+        </h2>
+        <ul>
+          <% @calculation.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
     <!--  Base Currency-->
     <div class="form-group">
      <label class="btn btn-primary">From</label>

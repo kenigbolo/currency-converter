@@ -1,4 +1,3 @@
-require 'date'
 class Calculation < ApplicationRecord
   include HTTParty
   DEFAULT_DATE = (Date.today - 25).to_s
