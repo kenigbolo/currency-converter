@@ -4,6 +4,7 @@ module CalculationsHelper
     value = calculate_result(calc_to_convert, today_value)
     Result.create!(value: value, calculation_id: calc_to_convert.id)
   end
+
   def calculate_result(calc_to_convert, today_value)
     change_rate = conversion(calc_to_convert)
     value = {(Date.today.to_s) => today_value}
@@ -16,13 +17,16 @@ module CalculationsHelper
     end
     return value
   end
+
   def save_current_value(calc_to_convert, today_value)
     calc_to_convert.current_rate = today_value
     calc_to_convert.save!
   end
+
   def week_number(week)
     return (Date.parse week).cweek
   end
+
   def rate_today(calc_to_convert)
     conv = calc_to_convert.conversion_currency.to_sym
     current_rate = check_current_rate(calc_to_convert)
@@ -56,11 +60,13 @@ module CalculationsHelper
       return current_rate(base, calc_to_convert)
     end
   end
+
   def current(calc_to_convert)
     current = eval(calc_to_convert.get_current!)
     Calculation::RATES.push(current)
     return current
   end
+
   def current_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Date.today.to_s
@@ -80,11 +86,13 @@ module CalculationsHelper
       return previous_rate(base, calc_to_convert)
     end
   end
+
   def previous(calc_to_convert)
     previous = eval(calc_to_convert.get_previous!)
     Calculation::RATES.push(previous)
     return previous
   end
+
   def previous_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Calculation::DEFAULT_DATE
@@ -94,6 +102,7 @@ module CalculationsHelper
       end
     end
   end
+
   # Helpers for calculation view
   def exchange_total_amount(calculation, result)
     if result.class == Array
@@ -102,6 +111,7 @@ module CalculationsHelper
       (result * calculation.amount).round(2)
     end
   end
+  
   def profit_loss(calculation, result)
     predicted_value = exchange_total_amount(calculation, result)
     return (predicted_value - (calculation.current_rate * calculation.amount)).round(2)
