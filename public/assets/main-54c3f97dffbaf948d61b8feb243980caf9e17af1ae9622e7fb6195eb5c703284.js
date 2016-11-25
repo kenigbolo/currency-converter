@@ -59,7 +59,7 @@
 		======================================*/
 
 		//Image Background
-		$(".image-background").backstretch("assets/image-bg.jpg");
+		$(".image-background").backstretch("<%= asset_path('image-bg.jpg') %>");
 
 
 
