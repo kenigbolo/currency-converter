@@ -56,7 +56,7 @@
         <div class="menu__inner">
           <ul>
             <li><a href="/"><i class="fa fa-fw fa-home"></i><span>Home</span></a></li>
-            <li><a href=""><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
+            <li><a href="<%= calculations_path %>"><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
             <% if user_signed_in? %>
             <li><a href="<%= edit_user_registration_path %>"><i class="fa fa-fw fa-info"></i><span>Profile</span></a></li>
             <li><a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-fw fa-sign-out"></i><span>Logout</span></a></li>

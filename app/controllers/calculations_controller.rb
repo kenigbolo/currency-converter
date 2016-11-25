@@ -1,6 +1,7 @@
 class CalculationsController < ApplicationController
   before_action :authenticate_user!, except: :index
   def index
+    @calculation = Calculation.all
   end
 
   def create
