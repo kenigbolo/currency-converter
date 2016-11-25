@@ -18,11 +18,11 @@
                 <tr>
                   <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= date %></th>
                   <!-- current_rate + value -->
-                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= exchange_rate(calculation, value) %></th>
+                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%=  value.round(4) %></th>
                   <!-- exchange_rate * amount -->
-                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= exchange_total_amount(calculation, value) %></th>
+                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= exchange_total_amount(@calculation, value) %></th>
                    <!-- (predicted_rate * amount) - (today_rate * amount) -->
-                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= profit_loss(calculation, value) %></th>
+                  <th scope="row" type="button" class="btn btn-primary btn-result-form"><%= profit_loss(@calculation, value) %></th>
                 </tr>
               <% end %>
             <% end %>

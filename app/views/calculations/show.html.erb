@@ -1,13 +1,7 @@
 <div class="section-overlay-modify">
   <!-- main -->
   <div class="main">
-  	<!-- header -->
-  	<header class="header-site">
-  		<div class="logo-site animated bounceInDown" data-animation-delay="700">
-  			<h1> Meya Currency Predictor </h1>
-  		</div>
-  	</header>
-  	<!-- /header -->
+
 
   	<!-- section -->
   	<section class="section fullscreen site-main">
@@ -68,7 +62,7 @@
                                 <th scope="row"><%= @top_three.index(result) + 1%></th>
                                 <th scope="row"><%= result.first %>     | Week <%= week_number(result.first)%></th>
                                 <!-- current_rate + value -->
-                                <th scope="row"><%= exchange_rate(@calculation, result)%></th>
+                                <th scope="row"><%= result.second.round(4)%></th>
                                 <!-- exchange_rate * amount -->
                                 <th scope="row"><%= exchange_total_amount(@calculation, result) %></th>
                                 <!-- (predicted_rate * amount) - (today_rate * amount) -->
