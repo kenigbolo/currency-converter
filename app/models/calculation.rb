@@ -20,13 +20,13 @@ class Calculation < ApplicationRecord
   end
   def get_previous!
     response = HTTParty.get("http://localhost:8080/#{DEFAULT_DATE}?base=#{self.base_currency}")
-    return response.body
+    response.body
   end
   def get_current!
     response = HTTParty.get("http://localhost:8080/latest?base=#{self.base_currency}")
-    return response.body
+    response.body
   end
   def weeks!
-    return self.num_of_days * WEEK
+    self.num_of_days * WEEK
   end
 end
