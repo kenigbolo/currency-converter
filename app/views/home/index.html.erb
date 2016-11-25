@@ -36,6 +36,9 @@
 
 									<!-- content slide -->
 									<div class="content-slide">
+									<!-- Clock Countdown -->
+									<div id="clock-countdown" class="animated bounceInDown" data-animation-delay="700"></div>
+									<h3 class="color-white top-margin animated bounceInDown" data-animation-delay="700" >We provide you the best currency exchange prediction service</h3>
 									<!-- Subscribe Form -->
 										<div class="form animated bounceInUp" data-animation-delay="700">
 											<!-- container form -->
@@ -48,9 +51,7 @@
 															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
 														</form>
 													<% else %>
-														<form class="sign-up-sign-in-form" method="post" id="mc-form">
-															<a href="/calculations"><button type="submit" id="" class="border-button no-bottom-margin">Get Started</button></a>
-														</form>
+														<%= render 'calculation_form'%>
 													<% end %>
 												</div>
 												<!-- /section page -->

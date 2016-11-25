@@ -42,6 +42,8 @@
   </head>
 
   <body class="image-background">
+    <!--  Wrapper -->
+    <div id="wrapper">
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
@@ -54,7 +56,7 @@
         <div class="menu__inner">
           <ul>
             <li><a href="/"><i class="fa fa-fw fa-home"></i><span>Home</span></a></li>
-            <li><a href=""><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
+            <li><a href="<%= calculations_path %>"><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
             <% if user_signed_in? %>
             <li><a href="<%= edit_user_registration_path %>"><i class="fa fa-fw fa-info"></i><span>Profile</span></a></li>
             <li><a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-fw fa-sign-out"></i><span>Logout</span></a></li>
@@ -68,20 +70,23 @@
         </div>
       </nav>
       <!-- /menu -->
-
+      <div id="content">
       <%= yield %>
-
+      </div>
       <!-- copyright -->
+      <div id="footer">
       <footer class="copy-right animated bounceInUp" data-animation-delay="700">
         <div class="copyright">
           © 2016 <a href="http://templatestock.co">Kenigbolo Meya Stephen</a> - All Rights Reserved
         </div>
       </footer>
+    </div>
       <!-- /copyright -->
 
     </div>
     <!-- /container -->
-
+    </div>
+    <!--  /wrapper -->
     <!-- JS -->
     <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
     <%= javascript_include_tag 'bootstrap.min.js' %>
