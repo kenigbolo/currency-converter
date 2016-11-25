@@ -1,3 +1,4 @@
+# Helper methods for calculation go in here
 module CalculationsHelper
   def get_result(calc_to_convert)
     today_value = rate_today(calc_to_convert)
