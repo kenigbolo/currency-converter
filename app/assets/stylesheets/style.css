@@ -137,7 +137,7 @@ p.lead {
 	font-weight: 400;
 }
 
-, a > * {
+/*, a > * {
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in-out;
@@ -150,7 +150,7 @@ p.lead {
 a:hover, a > *:hover, a:focus {
 	text-decoration: none;
 	outline: 0;
-}
+}*/
 ul {
 	list-style:none;
 }
@@ -494,9 +494,9 @@ border: 0 !important;
 iframe {
 	 width:450px;
 	 height:400px;
-	  -webkitallowfullscreen : width:450px; height:400px;
+	  /*-webkitallowfullscreen : width:450px; height:400px;
 	  -mozallowfullscreen : width:450px; height:400px;
-	  -allowfullscreen : width:450px; height:400px;
+	  -allowfullscreen : width:450px; height:400px;*/
 }
 
 /* ==================== 9.2 SERVICES SECTION - SLIDER ==================== */
@@ -571,8 +571,8 @@ border: 0 !important;
 #map1 {
 	 width: 450px;
 	 height: 400px;
-	  -webkit: width:450px; height:400px;
-	  -moz: width:450px; height:400px;
+	  /*-webkit: width:450px; height:400px;
+	  -moz: width:450px; height:400px;*/
 }
 
 /* ==================== 9.4 TEAM SECTION - SLIDER ==================== */

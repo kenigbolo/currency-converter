@@ -44,9 +44,11 @@ class CalculationsController < ApplicationController
   end
 
   private
+
   def calculation_params
     params.require(:calculation).permit(:base_currency, :conversion_currency, :amount, :num_of_days)
   end
+  
   def save_calculation(calculation_params)
     calculation = Calculation.new(calculation_params)
     calculation.user_id = current_user.id

@@ -19,11 +19,11 @@ class Calculation < ApplicationRecord
     self
   end
   def get_previous!
-    response = HTTParty.get("http://localhost:8080/#{DEFAULT_DATE}?base=#{self.base_currency}")
+    response = HTTParty.get("http://fixer-node-api.herokuapp.com/#{DEFAULT_DATE}?base=#{self.base_currency}")
     return response.body
   end
   def get_current!
-    response = HTTParty.get("http://localhost:8080/latest?base=#{self.base_currency}")
+    response = HTTParty.get("http://fixer-node-api.herokuapp.com/latest?base=#{self.base_currency}")
     return response.body
   end
   def weeks!
