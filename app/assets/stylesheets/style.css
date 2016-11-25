@@ -137,7 +137,7 @@ p.lead {
 	font-weight: 400;
 }
 
-, a > * {
+/*, a > * {
 	cursor: pointer;
 	text-decoration: none;
 	-webkit-transition: all .3s ease-in-out;
@@ -145,7 +145,7 @@ p.lead {
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
-}
+}*/
 
 a:hover, a > *:hover, a:focus {
 	text-decoration: none;
@@ -491,13 +491,13 @@ strong {
 .video-content iframe {
 border: 0 !important;
 }
-iframe {
+/*iframe {
 	 width:450px;
 	 height:400px;
 	  -webkitallowfullscreen : width:450px; height:400px;
 	  -mozallowfullscreen : width:450px; height:400px;
 	  -allowfullscreen : width:450px; height:400px;
-}
+}*/
 
 /* ==================== 9.2 SERVICES SECTION - SLIDER ==================== */
 
