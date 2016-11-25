@@ -12,7 +12,7 @@ gem 'rubocop', require: false
 gem 'omniauth'
 gem 'omniauth-github'
 gem 'httparty', '~> 0.13'
-gem "chartkick"
+gem 'chartkick'
 
 group :development, :test do
   gem 'byebug', platform: :mri
