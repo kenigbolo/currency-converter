@@ -106,12 +106,12 @@ module CalculationsHelper
   # Helpers for calculation view
   def exchange_total_amount(calculation, result)
     if result.class == Array
-      return (result.second * calculation.amount).round(2)
+      (result.second * calculation.amount).round(2)
     else
       (result * calculation.amount).round(2)
     end
   end
-  
+
   def profit_loss(calculation, result)
     predicted_value = exchange_total_amount(calculation, result)
     return (predicted_value - (calculation.current_rate * calculation.amount)).round(2)
