@@ -1,7 +1,8 @@
 require 'rails_helper'
 require 'spec_helper'
+require "selenium-webdriver"
 
-describe 'Adding an item to cart', js: true do
+describe 'Adding a calculation', js: true do
 
   context "Signed in" do
 
