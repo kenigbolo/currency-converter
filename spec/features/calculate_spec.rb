@@ -6,12 +6,13 @@ describe 'Adding a calculation', js: true do
 
   context "Signed in" do
 
-    let!(:user){ FactoryGirl.create :user }
+    user = FactoryGirl.create(:user)
 
     it "Signed in user can make a calculation" do
-      user_signed_in = true
 
       visit root_path
+
+      login_as(user, :scope => :user)
 
       find('#calculation_amount').set {SecureRandom.random_number(25000)}
 
