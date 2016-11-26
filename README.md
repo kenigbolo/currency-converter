@@ -1,5 +1,7 @@
 # DEVELOPERS GUIDE
 
+[![Build Status](https://travis-ci.org/kenigbolo/currency-converter.png)](https://travis-ci.org/kenigbolo/currency-converter)
+
 ##Getting Started
 
 + Clone the application with `git clone https://github.com/kenigbolo/currency-converter.git` or use ssh  `git clone git@github.com:kenigbolo/currency-converter.git`.
