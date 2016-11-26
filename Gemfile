@@ -22,6 +22,10 @@ group :development, :test do
   gem 'faker'
   gem 'shoulda-matchers'
 end
+
+group :test do
+  gem 'selenium-webdriver'
+end
 group :production do
   gem 'pg', '~> 0.18'
   gem 'rails_12factor'
