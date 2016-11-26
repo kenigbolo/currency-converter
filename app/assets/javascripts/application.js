@@ -23,6 +23,7 @@
  Use Javascript to disable Calculate button
 ============================================*/
 $( document ).ready(function() {
+    $('#logout').data('method', 'delete');
     $('input').keyup(function() {
 
         var empty = false;

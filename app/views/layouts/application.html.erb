@@ -46,8 +46,6 @@
   <body class="image-background">
     <!--  Wrapper -->
     <div id="wrapper">
-  	<p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
 
     <!-- container -->
     <div class="containers">
@@ -61,7 +59,7 @@
             <li><a href="<%= calculations_path %>"><i class="fa fa-fw fa-users"></i><span>History</span></a></li>
             <% if user_signed_in? %>
             <li><a href="<%= edit_user_registration_path %>"><i class="fa fa-fw fa-info"></i><span>Profile</span></a></li>
-            <li><a href="<%= destroy_user_session_path %>" data-method="delete"><i class="fa fa-fw fa-sign-out"></i><span>Logout</span></a></li>
+            <li><a href="<%= destroy_user_session_path %>" data-method="delete" id="logout"><i class="fa fa-fw fa-sign-out"></i><span>Logout</span></a></li>
             <% end %>
           </ul>
         </div>
@@ -73,7 +71,9 @@
       </nav>
       <!-- /menu -->
       <div id="content">
-      <%= yield %>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <%= yield %>
       </div>
       <!-- copyright -->
       <div id="footer">
