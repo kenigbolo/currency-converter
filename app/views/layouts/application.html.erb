@@ -6,6 +6,7 @@
 
     <% unless Rails.env.test? %>
       <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
+      <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       <!-- CSS Global Compulsory -->
       <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
