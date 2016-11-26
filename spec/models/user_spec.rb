@@ -1,14 +1,16 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-    before :each do
-      @user = FactoryGirl.build(:user)
-    end
     context "valid Factory" do
       it "has a valid factory" do
         expect(FactoryGirl.build(:user)).to be_valid
       end
     end
+
+    before :each do
+      @user = FactoryGirl.build(:user)
+    end
+    
     context "it validates the credentials properly" do
       it "should not be valid without a username" do
         @user.username = nil
