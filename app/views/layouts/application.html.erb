@@ -6,6 +6,8 @@
 
     <% unless Rails.env.test? %>
       <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
+      <%= javascript_include_tag 'jquery.backstretch.min.js' %>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>
       <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
       <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
       <!-- CSS Global Compulsory -->
@@ -29,6 +31,7 @@
       <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,900' rel='stylesheet' type='text/css'>
       <link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
       <script src="https://use.fontawesome.com/215857bd31.js"></script>
+
 
       <!-- JS -->
       <%= javascript_include_tag 'modernizr.js' %>
@@ -94,10 +97,8 @@
     <!--  /wrapper -->
     <!-- JS -->
     <% unless Rails.env.test? %>
-      <%= javascript_include_tag 'jquery-1.11.3.min.js' %>
       <%= javascript_include_tag 'bootstrap.min.js' %>
       <%= javascript_include_tag 'retina.min.js' %>
-      <%= javascript_include_tag 'jquery.backstretch.min.js' %>
       <%= javascript_include_tag 'jquery.countdown.min.js' %>
       <%= javascript_include_tag 'jquery.parallaxify.min.js' %>
       <%= javascript_include_tag 'jquery.particleground.min.js' %>

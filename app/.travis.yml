@@ -1,0 +1,15 @@
+language: ruby
+rvm:
+  - 2.2.2
+cache: bundler
+services:
+  - postgresql
+before_script:
+  - psql -c 'create database travis_ci_test;' -U postgres
+before_install:
+  - gem update --system
+  - gem --version
+script:
+  - bundle exec rake db:test:prepare
+  - RAILS_ENV=test bundle exec rake db:schema:load --trace
+  - bundle exec rspec spec/
