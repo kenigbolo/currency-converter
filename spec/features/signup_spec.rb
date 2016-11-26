@@ -4,6 +4,7 @@ require 'rails_helper'
 
 RSpec.feature "Sign up", :type => :feature do
   describe 'Spec for Sign Up' do
+    count = User.count
     before :each do
       visit new_user_registration_path
       email = 'abcd@example.com'
@@ -18,7 +19,7 @@ RSpec.feature "Sign up", :type => :feature do
     	expect(page).to have_content 'Welcome! You have logged up successfully.'
     end
     it 'should create a new user account' do
-      expect(User.count).to eq(1)
+      expect(User.count).to eq(count + 1)
     end
   end
 end
