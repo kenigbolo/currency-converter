@@ -10,21 +10,21 @@ RSpec.describe User, type: :model do
     before :each do
       @user = FactoryGirl.build(:user)
     end
-    
+
     context "it validates the credentials properly" do
       it "should not be valid without a username" do
         @user.username = nil
-        @user.should_not be_valid
+        expect(@user).to_not be_valid
       end
 
       it "should not be valid without a password" do
         @user.password = nil
-        @user.should_not be_valid
+        expect(@user).to_not be_valid
       end
 
       it "should not be valid without an email" do
         @user.email = nil
-        @user.should_not be_valid
+        expect(@user).to_not be_valid
       end
     end
 
