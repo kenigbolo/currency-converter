@@ -11,5 +11,4 @@ before_install:
   - gem --version
 script:
   - bin/rails db:migrate RAILS_ENV=test
-  - bundle exec rake db:test:prepare
   - bundle exec rspec spec/
