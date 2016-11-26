@@ -1,9 +1,9 @@
 FactoryGirl.define do
   factory :calculation do
-    base_currency "MyString"
-    conversion_currency "MyString"
-    amount 1.5
-    num_of_days 1
-    user nil
+    base_currency "EUR"
+    conversion_currency "USD"
+    amount {SecureRandom.random_number(25000)}
+    num_of_days {SecureRandom.random_number(250)}
+    user
   end
 end

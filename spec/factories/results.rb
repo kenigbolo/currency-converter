@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :result do
-    value "MyText"
-    calculation nil
+    value '{"25-01-2024": 1.4140}'
+    calculation
   end
 end

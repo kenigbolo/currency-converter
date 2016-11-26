@@ -1,5 +1,5 @@
 FactoryGirl.define do
   factory :currency do
-    name "MyString"
+    name "EUR"
   end
 end
