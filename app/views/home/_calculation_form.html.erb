@@ -18,14 +18,14 @@
     <!--  Amount -->
      <div class="form-group">
       <label class="btn btn-primary">Amount</label>
-        <%= f.number_field :amount, class: "form-control btn" %>
+        <%= f.number_field :amount, class: "form-control btn", required: true %>
      </div>
     <!--  !Amount -->
 
     <!--  Number of Days -->
      <div class="form-group">
-      <label class="btn btn-primary">Days</label>
-        <%= f.number_field :num_of_days, in: 1..250, class: "form-control btn" %>
+      <label class="btn btn-primary">Weeks</label>
+        <%= f.number_field :num_of_days, in: 1..250, class: "form-control btn", required: true %>
     </div>
     <!--  !Number of Days -->
 
