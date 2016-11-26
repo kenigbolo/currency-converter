@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require Chart.bundle
-//= require highcharts.js
 //= require chartkick
 //= require jquery
 //= require jquery_ujs
