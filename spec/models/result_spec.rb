@@ -6,11 +6,13 @@ RSpec.describe Result, type: :model do
       expect(FactoryGirl.build(:result)).to be_valid
     end
   end
+
   before :each do
     @result = FactoryGirl.build(:result)
   end
+
   context "it validates the credentials properly" do
-    it "validates the presence of a result value" do
+    it "is a valid result" do
       expect(@result).to be_valid
     end
 

@@ -4,7 +4,7 @@ class Calculation < ApplicationRecord
   WEEK = 7
   RATES = []
   belongs_to :user
-  has_one :calculation
+  has_one :result
   validates :base_currency, :conversion_currency, :amount, :num_of_days, presence: true
   def remove_calculation!
     ActiveRecord::Base.transaction do
