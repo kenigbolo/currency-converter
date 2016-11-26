@@ -19,3 +19,6 @@
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# Ignore highchart js file
+/app/assets/javascripts/highcharts.js
