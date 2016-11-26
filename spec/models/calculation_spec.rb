@@ -41,4 +41,19 @@ RSpec.describe Calculation, type: :model do
       expect(@calculation).to_not be_valid
     end
   end
+
+  context "Returns the needed values for it's class methods" do
+    it "returns the total number of days for week selection" do
+      total_days = @calculation.num_of_days * 7
+      expect(@calculation.weeks!).to eq(total_days)
+    end
+
+    it "deletes a calculation" do
+      expect(@calculation.remove_calculation!).to eq(true)
+    end
+
+    it 'saves a valid calculation' do
+      expect(@calculation.save_calc!).to eq(@calculation)
+    end
+  end
 end
