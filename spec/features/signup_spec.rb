@@ -1,5 +1,6 @@
 ### Test for creating an account
 require 'spec_helper'
+require 'rails_helper'
 
 RSpec.feature "Sign up", :type => :feature do
   describe 'Spec for Sign Up' do

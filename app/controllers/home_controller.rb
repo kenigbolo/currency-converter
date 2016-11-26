@@ -8,4 +8,10 @@ class HomeController < ApplicationController
       redirect_back(fallback_location: root_path)
     end
   end
+
+	def logout
+		sign_out
+		reset_session
+		redirect_to root_path
+	end
 end
