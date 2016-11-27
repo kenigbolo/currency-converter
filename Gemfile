@@ -14,6 +14,7 @@ gem 'omniauth-github'
 gem 'httparty', '~> 0.13'
 gem 'chartkick'
 gem 'figaro'
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri

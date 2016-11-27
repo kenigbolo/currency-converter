@@ -1,27 +1,95 @@
-<% if user_signed_in? %>
-	Logged in as <strong><%= current_user.email %></strong>
-<% end %>
-
-
 <!-- Overlay -->
 <div id="section-home" class="home-section-wrap center">
 	<div class="section-overlay"></div>
 </div>
 <!-- /Overlay -->
+<div class="section-overlay">
+	<!-- main -->
+	<div class="main">
+		<!-- header -->
+		<header class="header-site">
+			<div class="logo-site animated bounceInDown" data-animation-delay="700">
+				<h1> Meya Currency Predictor </h1>
+			</div>
+		</header>
+		<!-- /header -->
 
-<!-- main -->
-<div class="main">
-	<!-- header -->
-	<header class="header-site">
-		<div class="logo-site animated bounceInDown" data-animation-delay="700">
-			<h1> Meya Currency Predictor </h1>
-		</div>
-	</header>
-	<!-- /header -->
-	<% @calculation.each do |calculation| %>
-		<p>Convert <%=calculation.amount%> from <%= calculation.base_currency%> to <%=calculation.conversion_currency%>  |  Duration <%= calculation.num_of_days %> weeks </p>
-		<%= link_to 'view', calculation_path(calculation) %>
-	<% end %>
+		<!-- section -->
+		<section class="section fullscreen site-main">
+			<div class="container-section">
+					<div class="container-table">
+						<div class="content-table">
+						<!-- bt-carousel -->
+						<div class="bt-carousel">
 
+							<!-- home section -->
+							<div class="item-slide show">
+								<!-- container -->
+								<div class="container">
+									<div class="row">
+										<div class="col-md-10 col-md-offset-1">
+
+										<!-- content slide -->
+										<div class="content-slide">
+										<!-- Subscribe Form -->
+											<div class="form animated bounceInUp" data-animation-delay="700">
+												<!-- container form -->
+												<div class="container-form">
+													<!-- section page -->
+													<div class="section-page" id="signup">
+													<%= page_entries_info @calculation %>
+														<% @calculation.each do |calculation| %>
+															<table class="table table-bordered">
+																<thead class="thead-default">
+																	<tr>
+																		<th>Search Date</th>
+																		<th>Convert</th>
+																		<th>Duration</th>
+																		<th>View</th>
+																		<% if calculation.user == current_user %>
+																		<th>Edit</th>
+																		<th>Delete</th>
+																		<%end%>
+																	</tr>
+																</thead>
+															  <tbody>
+															    <tr>
+															      <th><%= calculation.created_at%></th>
+															      <td><%=calculation.amount%> from <%= calculation.base_currency%> to <%=calculation.conversion_currency%></td>
+															      <td><%= calculation.num_of_days %> weeks</td>
+															      <td><%= button_to 'view', calculation_path(calculation), class: 'btn-viewing' %></td>
+																		<% if calculation.user == current_user %>
+																		<td><%= button_to 'edit', edit_calculation_path(calculation), class: 'btn-viewing' %></td>
+																		<td><%= button_to 'delete', calculation, method: :delete, class: 'btn-viewing' %></td>
+																		<% end %>
+															    </tr>
+															  </tbody>
+															</table>
+														<% end %>
+														<%= paginate @calculation %>
+													</div>
+													<!-- /section page -->
+												</div>
+												<!-- /container form -->
+											</div>
+											<!-- /Subscribe Form -->
+
+										</div><!-- /content slide -->
+										</div>
+									</div>
+									<!-- /row -->
+								</div>
+								<!-- /container -->
+							</div>
+							<!-- /home section -->
+
+						</div>
+						<!-- /bt-carousel -->
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- /section -->
+	</div>
+	<!-- /main -->
 </div>
-<!-- /main -->

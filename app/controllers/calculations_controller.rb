@@ -1,8 +1,10 @@
 class CalculationsController < ApplicationController
+  PER_PAGE = 5
+
   before_action :authenticate_user!, except: :index
 
   def index
-    @calculation = Calculation.all
+    @calculation = Calculation.all.page(params[:page]).per(PER_PAGE)
   end
 
   def create

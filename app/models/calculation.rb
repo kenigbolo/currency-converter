@@ -30,7 +30,7 @@ class Calculation < ApplicationRecord
     response = HTTParty.get("http://fixer-node-api.herokuapp.com/latest?base=#{self.base_currency}")
     return response.body
   end
-  
+
   def weeks!
     return self.num_of_days * WEEK
   end
