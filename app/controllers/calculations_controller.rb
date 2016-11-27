@@ -1,4 +1,4 @@
-# rubocop:disable FrozenStringLiteralComment
+# frozen_string_literal: true
 # rubocop:disable MethodLength
 # rubocop:disable Metrics/AbcSize
 # ! Calculation controller methods

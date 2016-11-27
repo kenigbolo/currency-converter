@@ -21,6 +21,6 @@ Rails.application.configure do
   config.active_record.migration_error = :page_load
   config.assets.debug = true
   config.assets.quiet = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000'}
+  config.action_mailer.default_url_options = { host: 'localhost:3000' }
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 end

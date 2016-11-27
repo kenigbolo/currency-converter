@@ -1,4 +1,4 @@
-# rubocop:disable ClassLength
+# frozen_string_literal: true
 # Helper methods for calculation go in here
 module CalculationsHelper
   def get_result(calc_to_convert)
@@ -9,15 +9,15 @@ module CalculationsHelper
 
   def calculate_result(calc_to_convert, today_value)
     change_rate = conversion(calc_to_convert)
-    value = {(Date.today.to_s) => today_value}
+    value = { Date.today.to_s => today_value }
     save_current_value(calc_to_convert, today_value)
     (1..calc_to_convert.weeks!).each do |daily_rate|
-      if ((daily_rate % Calculation::WEEK) == 0)
+      if (daily_rate % Calculation::WEEK).zero?
         # Add a Standard random value deviation using international -0.2 to 0.2 change rate in currency forecasting
-        value[(Date.today + daily_rate).to_s] = today_value + (change_rate * rand(-0.01..0.05) )
+        value[(Date.today + daily_rate).to_s] = today_value + (change_rate * rand(-0.01..0.05))
       end
     end
-    return value
+    value
   end
 
   def save_current_value(calc_to_convert, today_value)
@@ -26,13 +26,13 @@ module CalculationsHelper
   end
 
   def week_number(week)
-    return (Date.parse week).cweek
+    (Date.parse week).cweek
   end
 
   def rate_today(calc_to_convert)
     conv = calc_to_convert.conversion_currency.to_sym
     current_rate = check_current_rate(calc_to_convert)
-    return current_rate[:rates][conv]
+    current_rate[:rates][conv]
   end
 
   def conversion(calc_to_convert)
@@ -40,17 +40,17 @@ module CalculationsHelper
       conv = calc_to_convert.conversion_currency.to_sym
       current_rate = check_current_rate(calc_to_convert)
       previous_rate = check_previous_rate(calc_to_convert)
-      return conv_percentage(current_rate[:rates][conv], previous_rate[:rates][conv])
+      conv_percentage(current_rate[:rates][conv], previous_rate[:rates][conv])
     end
   end
 
   # Algorithm for calculating average percentage change over the past 25 weeks
-  def conv_percentage (current_rate, previous_rate)
+  def conv_percentage(current_rate, previous_rate)
     # Increase or decrease in value
-    diff = ( (current_rate - previous_rate) / ( (current_rate + previous_rate) / 2 ) ) * 100
+    diff = ((current_rate - previous_rate) / ((current_rate + previous_rate) / 2)) * 100
     # Weekly change algorithm
-    change = ((7*diff)/25)
-    return change
+    change = ((7 * diff) / 25)
+    change
   end
 
   # Helpers for current rate
@@ -66,7 +66,7 @@ module CalculationsHelper
   def current(calc_to_convert)
     current = eval(calc_to_convert.get_current!)
     Calculation::RATES.push(current)
-    return current
+    current
   end
 
   def current_rate(base, calc_to_convert)
@@ -92,7 +92,7 @@ module CalculationsHelper
   def previous(calc_to_convert)
     previous = eval(calc_to_convert.get_previous!)
     Calculation::RATES.push(previous)
-    return previous
+    previous
   end
 
   def previous_rate(base, calc_to_convert)
@@ -116,6 +116,6 @@ module CalculationsHelper
 
   def profit_loss(calculation, result)
     predicted_value = exchange_total_amount(calculation, result)
-    return (predicted_value - (calculation.current_rate * calculation.amount)).round(2)
+    (predicted_value - (calculation.current_rate * calculation.amount)).round(2)
   end
 end

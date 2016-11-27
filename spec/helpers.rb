@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 module Helpers
   def login_with_username
     login
@@ -22,11 +23,11 @@ module Helpers
 
   def calculate
     visit '/'
-    find('#calculation_amount').set SecureRandom.random_number(25000)
-    find('#calculation_amount').set SecureRandom.random_number(25000)
-    find('#calculation_num_of_days').set SecureRandom.random_number(25000)
-    select "EUR", :from => "calculation_base_currency"
-    select "USD", :from => "calculation_conversion_currency"
+    find('#calculation_amount').set SecureRandom.random_number(25_000)
+    find('#calculation_amount').set SecureRandom.random_number(25_000)
+    find('#calculation_num_of_days').set SecureRandom.random_number(25_000)
+    select 'EUR', from: 'calculation_base_currency'
+    select 'USD', from: 'calculation_conversion_currency'
   end
 
   def omniauth

@@ -1,44 +1,36 @@
+# frozen_string_literal: true
 require 'rails_helper'
 require 'spec_helper'
 
 describe 'Logging in' do
+  let(:password) { SecureRandom.hex }
 
-  let(:password){ SecureRandom.hex }
+  context 'Log in with email' do
+    let!(:user) { FactoryGirl.create :user, password: password, password_confirmation: password }
 
-  context "Log in with email" do
-
-    let!(:user){ FactoryGirl.create :user, password: password, password_confirmation: password }
-
-    it "works" do
+    it 'works' do
       logout(:user)
       login_with_email
 
-      expect {
+      expect do
         submit_form
-      }.to change {
+      end.to change {
         current_path
       }.from(new_user_session_path).to(root_path)
-
     end
-
   end
 
-  context "Log in with username" do
+  context 'Log in with username' do
+    let!(:user) { FactoryGirl.create :user, password: password, password_confirmation: password }
 
-    let!(:user){ FactoryGirl.create :user, password: password, password_confirmation: password }
-
-    it "works" do
-
+    it 'works' do
       login_with_username
 
-      expect {
+      expect do
         submit_form
-      }.to change {
+      end.to change {
         current_path
       }.from(new_user_session_path).to(root_path)
-
     end
-
   end
-
 end

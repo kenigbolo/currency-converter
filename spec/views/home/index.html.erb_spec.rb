@@ -1,14 +1,17 @@
+# frozen_string_literal: true
 require 'rails_helper'
 require 'spec_helper'
-require "selenium-webdriver"
+require 'selenium-webdriver'
 
 describe 'home/index.html.erb' do
   before do
     controller.singleton_class.class_eval do
       protected
+
         def user_signed_in?
           true
         end
+
         def current_user
           FactoryGirl.build(:user)
         end

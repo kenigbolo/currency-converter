@@ -6,7 +6,7 @@ AllCops:
 
 # Customize rules
 Metrics/LineLength:
-  Enabled: false
+  Max: 250
 
 MethodLength:
   Enabled: false
@@ -19,3 +19,14 @@ BlockLength:
 
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Style/LineLength:
+  Enabled: false
+
+Lint/Eval:
+  Exclude:
+    - 'app/helpers/calculations_helper.rb'
+
+Lint/AmbiguousRegexpLiteral:
+  Exclude:
+    - 'spec/views/home/index.html.erb_spec.rb'

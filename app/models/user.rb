@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 class User < ApplicationRecord
   has_many :calculations
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true
@@ -5,29 +6,25 @@ class User < ApplicationRecord
   validate :validate_username
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 
-  def login=(login)
-    @login = login
-  end
+  attr_writer :login
 
   def login
-    @login || self.username || self.email
+    @login || username || email
   end
 
   def self.find_for_database_authentication(warden_conditions)
     conditions = warden_conditions.dup
     if login = conditions.delete(:login)
-      where(conditions.to_hash).where(["lower(username) = :value OR lower(email) = :value", { :value => login.downcase }]).first
-    elsif conditions.has_key?(:username) || conditions.has_key?(:email)
-    	conditions[:email].downcase! if conditions[:email]
-			where(conditions).where(["username = :value OR lower(email) = lower(:value)", { :value => login }]).first
+      where(conditions.to_hash).where(['lower(username) = :value OR lower(email) = :value', { value: login.downcase }]).first
+    elsif conditions.key?(:username) || conditions.key?(:email)
+      conditions[:email]&.downcase!
+      where(conditions).where(['username = :value OR lower(email) = lower(:value)', { value: login }]).first
     end
   end
 
-	def validate_username
-	  if User.where(email: username).exists?
-	    errors.add(:username, :invalid)
-	  end
-	end
+  def validate_username
+    errors.add(:username, :invalid) if User.where(email: username).exists?
+  end
 
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
@@ -40,8 +37,8 @@ class User < ApplicationRecord
   end
 
   def self.new_with_session(params, session)
-    if session["devise.user_attributes"]
-      new(session["devise.user_attributes"], without_protection: true) do |user|
+    if session['devise.user_attributes']
+      new(session['devise.user_attributes'], without_protection: true) do |user|
         user.attributes = params
         user.valid?
       end
