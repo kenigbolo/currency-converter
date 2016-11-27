@@ -1,3 +1,5 @@
+# rubocop:disable MethodLength
+# Calculation controller methods
 class CalculationsController < ApplicationController
   PER_PAGE = 5
 
@@ -16,13 +18,7 @@ class CalculationsController < ApplicationController
       redirect_back(fallback_location: root_path)
     else
       calculation = save_calculation(calculation_params)
-      if calculation != false
-        helpers.get_result(calculation)
-        redirect_to calculation_url(calculation)
-      else
-        flash['notice'] = "Something went wrong"
-        redirect_back(fallback_location: root_path)
-      end
+      create_calculation(calculation)
     end
   end
 
@@ -48,9 +44,7 @@ class CalculationsController < ApplicationController
   def show
     @calculation = Calculation.find_by(id: params[:id])
     @result = Result.find_by(calculation_id: @calculation.id)
-    unless Rails.env.test?
-      @top_three = @result.top_three!
-    end
+    return @top_three = @result.top_three! unless Rails.env.test?
   end
 
   def destroy
@@ -62,11 +56,7 @@ class CalculationsController < ApplicationController
       rescue
         success = false
       end
-      if success
-        flash['notice'] = 'Calculation Prediction successfully deleted'
-      else
-        flash['error'] = 'Sorry, we encountered an error while deleting the currency prediction calculation'
-      end
+      check_success(success)
     else
       flash['error'] = 'You do not have the permission to delete this item'
     end
@@ -82,6 +72,24 @@ class CalculationsController < ApplicationController
   def save_calculation(calculation_params)
     calculation = Calculation.new(calculation_params)
     calculation.user_id = current_user.id
-    return calculation.save_calc!
+    calculation.save_calc!
+  end
+
+  def create_calculation(calculation)
+    if calculation != false
+      helpers.get_result(calculation)
+      redirect_to calculation_url(calculation)
+    else
+      flash['notice'] = 'Something went wrong'
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
+  def check_success(success)
+    if success
+      flash['notice'] = 'Calculation Prediction successfully deleted'
+    else
+      flash['error'] = 'Sorry, we encountered an error while deleting'
+    end
   end
 end

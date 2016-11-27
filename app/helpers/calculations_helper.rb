@@ -1,3 +1,4 @@
+# rubocop:disable ClassLength
 # Helper methods for calculation go in here
 module CalculationsHelper
   def get_result(calc_to_convert)
