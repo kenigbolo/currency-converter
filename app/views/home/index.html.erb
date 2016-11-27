@@ -51,6 +51,9 @@
 														<form class="sign-up-sign-in-form" method="post" id="mc-form">
 															<a href="<%= new_user_registration_path %>"><button type="submit" id="signup" class="border-button no-bottom-margin">Register</button></a>
 															<a href="<%= new_user_session_path %>"><button type="submit" id="login" class="border-button no-bottom-margin">Sign In</button></a>
+															<a class="btn  btn-social btn-github" href="<%= user_github_omniauth_authorize_path %>">
+																<span class="fa fa-github"></span> Sign in with Github
+															</a>
 														</form>
 													<% else %>
 														<%= render 'calculation_form'%>
