@@ -1,4 +1,6 @@
+# rubocop:disable FrozenStringLiteralComment
 # rubocop:disable MethodLength
+# rubocop:disable Metrics/AbcSize
 # ! Calculation controller methods
 class CalculationsController < ApplicationController
   PER_PAGE = 5
@@ -67,7 +69,9 @@ class CalculationsController < ApplicationController
   private
 
   def calculation_params
-    params.require(:calculation).permit(:base_currency, :conversion_currency, :amount, :num_of_days, :user_id)
+    params
+      .require(:calculation)
+      .permit(:base_currency, :conversion_currency, :amount, :num_of_days)
   end
 
   def save_calculation(calculation_params)
