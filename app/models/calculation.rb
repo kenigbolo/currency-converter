@@ -10,8 +10,8 @@ class Calculation < ApplicationRecord
   def remove_calculation!
     unless Rails.env.test?
       ActiveRecord::Base.transaction do
-        result = Result.find_by(calculation_id: self.id)
-        return false unless result.destroy! && self.destroy!
+        result = Result.where(calculation_id: self.id)
+        return false unless result.destroy_all && self.destroy!
       end
       true
     end

@@ -1,5 +1,5 @@
 # rubocop:disable MethodLength
-# Calculation controller methods
+# ! Calculation controller methods
 class CalculationsController < ApplicationController
   PER_PAGE = 5
 
@@ -49,7 +49,8 @@ class CalculationsController < ApplicationController
 
   def destroy
     calculation = Calculation.find(params[:id])
-    if calculation.user_id.present? && (current_user.id == calculation.user_id)
+    owns = current_user.id == calculation.user_id
+    if calculation.user_id.present? && owns
       success = false
       begin
         success = calculation.remove_calculation!
