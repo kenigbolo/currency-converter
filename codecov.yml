@@ -24,3 +24,6 @@ site:
   comment:
     layout: "header, diff"
     behavior: default
+
+  ignore:
+    - 'spec/'
