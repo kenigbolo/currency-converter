@@ -22,11 +22,12 @@ RSpec.feature "Sign up", :type => :feature do
     end
 
     scenario "It redirects to show result view path" do
+      calculate = FactoryGirl.create(:calculation)
       expect {
         find('#calculate').click
       }.to change {
         current_path
-      }.from(root_path).to(calculation_path(Calculation.last.id + 1))
+      }.from(root_path).to(calculation_path(calculate.id + 1))
     end
 
     scenario "It Creates a calculation" do
