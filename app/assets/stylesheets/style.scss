@@ -1087,6 +1087,7 @@ input:-moz-placeholder { text-overflow: ellipsis; }
 	-ms-transition: all .3s ease-in-out;
 	-o-transition: all .3s ease-in-out;
 	transition: all .3s ease-in-out;
+	overflow: auto;
 }
 
 
@@ -1546,7 +1547,7 @@ body.mobile .animated {
 	transition: all .3s ease-in-out;
 	background: linear-gradient(11deg, #3ed9b1, #2a8a8a, #36dcdd, #3692dd);
 	background-size: 800% 800%;
-	overflow: scroll !important;
+	overflow: auto !important;
 
 	-webkit-animation: AnimationName 30s ease infinite;
 	-moz-animation: AnimationName 30s ease infinite;

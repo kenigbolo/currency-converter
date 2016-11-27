@@ -1,5 +1,6 @@
 class CalculationsController < ApplicationController
   before_action :authenticate_user!, except: :index
+
   def index
     @calculation = Calculation.all
   end
@@ -7,6 +8,7 @@ class CalculationsController < ApplicationController
   def create
     base = params[:calculation][:base_currency]
     conversion = params[:calculation][:conversion_currency]
+
     if base == conversion
       flash['notice'] = "You cannot convert from #{base} to #{conversion}"
       redirect_back(fallback_location: root_path)
@@ -46,12 +48,11 @@ class CalculationsController < ApplicationController
   private
 
   def calculation_params
-    params.require(:calculation).permit(:base_currency, :conversion_currency, :amount, :num_of_days)
+    params.require(:calculation).permit(:base_currency, :conversion_currency, :amount, :num_of_days, :user_id)
   end
-  
+
   def save_calculation(calculation_params)
     calculation = Calculation.new(calculation_params)
-    calculation.user_id = current_user.id
     return calculation.save_calc!
   end
 end

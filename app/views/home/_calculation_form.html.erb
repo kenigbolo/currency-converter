@@ -1,6 +1,6 @@
 <% if user_signed_in? %>
   <!--  Exchange Form-->
-  <%= form_for :calculation,  url: calculations_path, html: {class: "form-inline" } do |f| %>
+  <%= form_for current_user.calculations.new,  url: calculations_path, html: {class: "form-inline" } do |f| %>
     <!--  Base Currency-->
     <div class="form-group">
      <label class="btn btn-primary">From</label>

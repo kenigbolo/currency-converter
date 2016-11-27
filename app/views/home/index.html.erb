@@ -1,5 +1,7 @@
-<% if user_signed_in? %>
-	Logged in as <strong><%= current_user.email %></strong>
+<% unless Rails.env.test? %>
+	<% if user_signed_in? %>
+		Logged in as <strong><%= current_user.email %></strong>
+	<% end %>
 <% end %>
 
 
@@ -45,10 +47,10 @@
 											<div class="container-form">
 												<!-- section page -->
 												<div class="section-page" id="signup">
-													<% unless user_signed_in? %>
+													<% unless user_signed_in? || Rails.env.test? %>
 														<form class="sign-up-sign-in-form" method="post" id="mc-form">
-															<a href="<%= new_user_registration_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Register</button></a>
-															<a href="<%= new_user_session_path %>"><button type="submit" id="" class="border-button no-bottom-margin">Sign In</button></a>
+															<a href="<%= new_user_registration_path %>"><button type="submit" id="signup" class="border-button no-bottom-margin">Register</button></a>
+															<a href="<%= new_user_session_path %>"><button type="submit" id="login" class="border-button no-bottom-margin">Sign In</button></a>
 														</form>
 													<% else %>
 														<%= render 'calculation_form'%>
