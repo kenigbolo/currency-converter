@@ -8,13 +8,13 @@ class Calculation < ApplicationRecord
   validates :base_currency, :conversion_currency, :amount, :num_of_days, presence: true
 
   def remove_calculation!
-    ActiveRecord::Base.transaction do
-      result = Result.find_by(calculation_id: self.id)
-      unless Rails.env.test?
-        return false unless result.destroy && self.destroy
+    unless Rails.env.test?
+      ActiveRecord::Base.transaction do
+        result = Result.find_by(calculation_id: self.id)
+        return false unless result.destroy! && self.destroy!
       end
+      true
     end
-    true
   end
 
   def save_calc!
