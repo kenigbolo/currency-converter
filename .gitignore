@@ -21,7 +21,7 @@
 .byebug_history
 
 # Ignore all public assets
-# public/assets/**
+public/assets/**
 
 # Ignore application configuration
 /config/application.yml
