@@ -11,6 +11,16 @@ RSpec.describe User, type: :model do
       @user = FactoryGirl.build(:user)
     end
 
+    describe ".from_omniauth" do
+      it {is_expected.to be_valid}
+    end
+
+    describe ".from_omniauth" do
+      it "saves new user" do
+        expect(User.all).should_not be_nil
+      end
+    end
+
     context "it validates the credentials properly" do
       it "should not be valid without a username" do
         @user.username = nil
