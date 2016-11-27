@@ -21,19 +21,11 @@ module Helpers
   end
 
   def calculate
-    find('#calculation_amount').set {SecureRandom.random_number(25000)}
-
-    find('#calculation_num_of_days').set {SecureRandom.random_number(25000)}
-
-    find("#calculation_base_currency[value='EUR']").select_option
-
-    find("#calculation_conversion_currency[value='USD']").select_option
-
-    expect {
-      find('#calculate').click
-      sleep 10
-    }.to change {
-      Calculation.count
-    }.by(1)
+    visit root_path
+    find('#calculation_amount').set SecureRandom.random_number(25000)
+    find('#calculation_amount').set SecureRandom.random_number(25000)
+    find('#calculation_num_of_days').set SecureRandom.random_number(25000)
+    select "EUR", :from => "calculation_base_currency"
+    select "USD", :from => "calculation_conversion_currency"
   end
 end

@@ -13,6 +13,7 @@ gem 'omniauth'
 gem 'omniauth-github'
 gem 'httparty', '~> 0.13'
 gem 'chartkick'
+gem 'figaro'
 
 group :development, :test do
   gem 'byebug', platform: :mri

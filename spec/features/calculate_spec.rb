@@ -7,16 +7,11 @@ RSpec.feature "Sign up", :type => :feature do
   @controller = CalculationsController.new
 
   before :each do
-    calculation = FactoryGirl.create(:calculation)
     user = FactoryGirl.create(:user)
     login_as(user, :scope => :user)
-    visit '/'
-    find('#calculation_amount').set SecureRandom.random_number(25000)
-    find('#calculation_amount').set SecureRandom.random_number(25000)
-    find('#calculation_num_of_days').set SecureRandom.random_number(25000)
-    select "EUR", :from => "calculation_base_currency"
-    select "USD", :from => "calculation_conversion_currency"
+    calculate
   end
+
   describe 'Spec for Sign Up' do
     scenario 'it should inform the with a welcome message' do
     	expect(page).to have_content 'Meya Currency Predictor'
@@ -24,6 +19,22 @@ RSpec.feature "Sign up", :type => :feature do
 
     scenario "it allow you to click calculate button after filling the form" do
       expect(page).to have_button("calculate")
+    end
+
+    scenario "It redirects to show result view path" do
+      expect {
+        find('#calculate').click
+      }.to change {
+        current_path
+      }.from(root_path).to(calculation_path(1))
+    end
+
+    scenario "It Creates a calculation" do
+      expect {
+        find('#calculate').click
+      }.to change {
+        Calculation.count
+      }.by(1)
     end
   end
 end

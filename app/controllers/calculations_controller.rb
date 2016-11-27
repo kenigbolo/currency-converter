@@ -14,8 +14,13 @@ class CalculationsController < ApplicationController
       redirect_back(fallback_location: root_path)
     else
       calculation = save_calculation(calculation_params)
-      helpers.get_result(calculation)
-      redirect_to calculation_url(calculation)
+      if calculation != false
+        helpers.get_result(calculation)
+        redirect_to calculation_url(calculation)
+      else
+        flash['notice'] = "Something went wrong"
+        redirect_back(fallback_location: root_path)
+      end
     end
   end
 
@@ -53,6 +58,7 @@ class CalculationsController < ApplicationController
 
   def save_calculation(calculation_params)
     calculation = Calculation.new(calculation_params)
+    calculation.user_id = current_user.id
     return calculation.save_calc!
   end
 end
