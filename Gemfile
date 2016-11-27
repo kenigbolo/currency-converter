@@ -29,6 +29,7 @@ end
 group :test do
   gem 'selenium-webdriver', '2.53.4'
   gem 'rails-controller-testing'
+  gem 'simplecov', require: false
 end
 group :production do
   gem 'pg', '~> 0.18'

@@ -6,16 +6,18 @@ RSpec.describe HomeController, type: :controller do
     get :index
   end
 
-  it 'Returns a 200 status OK' do
-    expect(response).to be_success
-  end
+  describe '#index' do
+    it 'Returns a 200 status OK' do
+      expect(response).to be_success
+    end
 
-  it 'allows authenticated access' do
-    current_user = sign_in @user
-    expect(current_user).to_not eq(nil)
-  end
+    it 'allows authenticated access' do
+      current_user = sign_in @user
+      expect(current_user).to_not eq(nil)
+    end
 
-  it 'renders the right template' do
-    response.should render_template('index')
+    it 'renders the right template' do
+      response.should render_template('index')
+    end
   end
 end

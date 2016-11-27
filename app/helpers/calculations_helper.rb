@@ -84,9 +84,9 @@ module CalculationsHelper
   def check_previous_rate(calc_to_convert)
     base = calc_to_convert.base_currency
     if Calculation::RATES.empty?
-      return previous(calc_to_convert)
+      previous(calc_to_convert)
     else
-      return previous_rate(base, calc_to_convert)
+      previous_rate(base, calc_to_convert)
     end
   end
 
@@ -99,9 +99,9 @@ module CalculationsHelper
   def previous_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Calculation::DEFAULT_DATE
-        return rate
+        rate
       else
-        return previous(calc_to_convert)
+        previous(calc_to_convert)
       end
     end
   end
