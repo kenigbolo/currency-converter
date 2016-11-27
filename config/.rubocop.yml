@@ -1,10 +1,8 @@
-inherit_from: ../.rubocop_todo.yml
 AllCops:
   Exclude:
-    - Berksfile
-    - recipes/basic.rb
-    - attributes/*.rb
-    - config/**/*
+    - 'db/**/*'
+    - 'config/**/*'
+    - 'script/**/*'
 
 # Customize rules
 Metrics/LineLength:
