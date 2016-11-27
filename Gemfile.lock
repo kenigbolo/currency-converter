@@ -55,6 +55,8 @@ GEM
     chartkick (2.1.1)
     childprocess (0.5.9)
       ffi (~> 1.0, >= 1.0.11)
+    codeclimate-test-reporter (0.6.0)
+      simplecov (>= 0.7.1, < 1.0.0)
     codecov (0.1.9)
       json
       simplecov
@@ -280,6 +282,7 @@ DEPENDENCIES
   byebug
   capybara
   chartkick
+  codeclimate-test-reporter (~> 0.4)
   codecov
   coffee-rails (~> 4.2)
   devise

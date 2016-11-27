@@ -31,6 +31,7 @@ group :test do
   gem 'rails-controller-testing'
   gem 'simplecov', require: false
   gem 'codecov', require: false
+  gem 'codeclimate-test-reporter', '~> 0.4'
 end
 group :production do
   gem 'pg', '~> 0.18'
