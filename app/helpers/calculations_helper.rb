@@ -58,9 +58,9 @@ module CalculationsHelper
   def check_current_rate(calc_to_convert)
     base = calc_to_convert.base_currency
     if Calculation::RATES.empty?
-      return current(calc_to_convert)
+      current(calc_to_convert)
     else
-      return current_rate(base, calc_to_convert)
+      current_rate(base, calc_to_convert)
     end
   end
 
@@ -73,9 +73,9 @@ module CalculationsHelper
   def current_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
       if rate[:base] == base && rate[:date] == Date.today.to_s
-        return rate
+        rate
       else
-        return current(calc_to_convert)
+        current(calc_to_convert)
       end
     end
   end
