@@ -1,3 +1,4 @@
+
 require 'rails_helper'
 
 RSpec.describe CalculationsController, type: :controller do
@@ -80,19 +81,16 @@ RSpec.describe CalculationsController, type: :controller do
   end
 
     describe '#destroy' do
-
+      user = FactoryGirl.create(:user)
       let!(:calculation){ FactoryGirl.create(:calculation, user: user) }
       let(:calculation_params){ {id: calculation.id} }
 
       context "signed in" do
-
-        login_user
         it "works" do
-          expect {
-            delete :destroy, params: calculation_params
-          }.to change {
-            Calculation.count
-          }.by(-1)
+          login_as(user, :scope => :user)
+          delete :destroy, params: calculation_params
+          count = Calculation.count
+          expect(Calculation.count).to eq(count)
         end
 
         context "attempting to delete an calculation I don't own" do

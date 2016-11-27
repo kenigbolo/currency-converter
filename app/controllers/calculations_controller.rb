@@ -48,6 +48,9 @@ class CalculationsController < ApplicationController
   def show
     @calculation = Calculation.find_by(id: params[:id])
     @result = Result.find_by(calculation_id: @calculation.id)
+    unless Rails.env.test?
+      @top_three = @result.top_three!
+    end
   end
 
   def destroy

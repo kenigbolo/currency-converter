@@ -26,7 +26,7 @@ RSpec.feature "Sign up", :type => :feature do
         find('#calculate').click
       }.to change {
         current_path
-      }.from(root_path).to(calculation_path(1))
+      }.from(root_path).to(calculation_path(Calculation.last.id + 1))
     end
 
     scenario "It Creates a calculation" do
