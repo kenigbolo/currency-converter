@@ -3,7 +3,7 @@ class Calculation < ApplicationRecord
   include HTTParty
   DEFAULT_DATE = (Date.today - 25).to_s
   WEEK = 7
-  RATES = [].freeze
+  RATES = []
   belongs_to :user
   has_one :result
   validates :base_currency, :conversion_currency, :amount, :num_of_days, presence: true
