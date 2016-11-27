@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable Lint/Eval
 # Helper methods for calculation go in here
 module CalculationsHelper
   def get_result(calc_to_convert)

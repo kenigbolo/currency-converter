@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable Style/RegexpLiteral
 require 'rails_helper'
 require 'spec_helper'
 require 'selenium-webdriver'
@@ -22,6 +23,6 @@ describe 'home/index.html.erb' do
 
   it 'checks for proper content' do
     render
-    expect(response.body).to match /Meya Currency Predictor/m
+    expect(response.body).to include('Meya Currency Predictor')
   end
 end
