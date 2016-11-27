@@ -19,7 +19,7 @@ class User < ApplicationRecord
     if login = conditions.delete(:login)
       where(conditions.to_hash).where(['lower(username) = :value OR lower(email) = :value', { value: login.downcase }]).first
     elsif conditions.key?(:username) || conditions.key?(:email)
-      conditions[:email]&.downcase!
+      conditions[:email].downcase!
       where(conditions).where(['username = :value OR lower(email) = lower(:value)', { value: login }]).first
     end
   end
