@@ -57,9 +57,9 @@
 															      <th><%= calculation.created_at%></th>
 															      <td><%=calculation.amount%> from <%= calculation.base_currency%> to <%=calculation.conversion_currency%></td>
 															      <td><%= calculation.num_of_days %> weeks</td>
-															      <td><%= button_to 'view', calculation_path(calculation), class: 'btn-viewing' %></td>
+															      <td><%= button_to 'view', calculation_path(calculation), method: :get, class: 'btn-viewing' %></td>
 																		<% if calculation.user == current_user %>
-																		<td><%= button_to 'edit', edit_calculation_path(calculation), class: 'btn-viewing' %></td>
+																		<td><%= button_to 'edit', edit_calculation_path(calculation), method: :get, class: 'btn-viewing' %></td>
 																		<td><%= button_to 'delete', calculation, method: :delete, class: 'btn-viewing' %></td>
 																		<% end %>
 															    </tr>

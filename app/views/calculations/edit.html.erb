@@ -1,0 +1,39 @@
+<% if @calculation.user == current_user %>
+  <!--  Exchange Form-->
+  <%= form_for :calculation,url: calculation_path(@calculation), method: :put, html: {class: "form-inline" } do |f| %>
+    <!--  Base Currency-->
+    <div class="form-group">
+     <label class="btn btn-primary">From</label>
+       <%= f.collection_select :base_currency, Currency.all, :name, :name, {selected: "EUR"}, {class: 'form-control currency-select'} %>
+    </div>
+   <!--  !Base Currency -->
+
+   <!--  Conversion Currency-->
+   <div class="form-group">
+    <label class="btn btn-primary">To</label>
+      <%= f.collection_select :conversion_currency, Currency.all, :name, :name, {}, {class: 'form-control currency-select'} %>
+   </div>
+  <!--  !Conversion Currency -->
+
+    <!--  Amount -->
+     <div class="form-group">
+      <label class="btn btn-primary">Amount</label>
+        <%= f.number_field :amount, class: "form-control btn", required: true %>
+     </div>
+    <!--  !Amount -->
+
+    <!--  Number of Days -->
+     <div class="form-group">
+      <label class="btn btn-primary">Weeks</label>
+        <%= f.number_field :num_of_days, in: 1..250, class: "form-control btn", required: true %>
+    </div>
+    <!--  !Number of Days -->
+
+    <!--  Submit -->
+    <div class="form-group">
+       <%= f.submit "Calculate", class: "btn btn-primary", id: 'calculate'%>
+    </div>
+    <!--  !Submit -->
+  <% end %>
+  <!--  !Exchange form-->
+<% end %>

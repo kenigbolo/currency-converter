@@ -26,6 +26,25 @@ class CalculationsController < ApplicationController
     end
   end
 
+  def edit
+    @calculation = Calculation.find_by(id: params[:id])
+    unless @calculation.user == current_user
+      flash['notice'] = 'Unauthorized access'
+      redirect_back(fallback_location: root_path)
+    end
+  end
+
+  def update
+    @calculation = current_user.calculations.find_by(id: params[:id])
+    if @calculation.update(calculation_params)
+      flash[:notice] = 'Currrency prediction request successfully updated.'
+      helpers.get_result(@calculation)
+      redirect_to @calculation
+    else
+      render 'edit'
+    end
+  end
+
   def show
     @calculation = Calculation.find_by(id: params[:id])
     @result = Result.find_by(calculation_id: @calculation.id)
