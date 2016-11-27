@@ -9,7 +9,8 @@ class Calculation < ApplicationRecord
 
   def remove_calculation!
     ActiveRecord::Base.transaction do
-      return false unless self.destroy && self.result.destroy
+      result = Result.find_by(calculation_id: self.id)
+      return false unless result.destroy && self.destroy
     end
     true
   end
