@@ -20,7 +20,6 @@ Style/FrozenStringLiteralComment:
 
 
 Style/EachWithObject:
-  Description: Prefer `each_with_object` over `inject` or `reduce`.
   Enabled: false
 
 
