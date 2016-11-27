@@ -10,7 +10,7 @@ describe 'Logging in' do
     let!(:user){ FactoryGirl.create :user, password: password, password_confirmation: password }
 
     it "works" do
-
+      logout(:user)
       login_with_email
 
       expect {

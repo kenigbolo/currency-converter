@@ -5,8 +5,8 @@ module Helpers
   end
 
   def login
-    visit root_path
-    first("a[href='#{new_user_session_path}']").click
+    visit new_user_session_path
+    # first("a[href='#{new_user_session_path}']").click
     find('#user_password').set user.password
   end
 
