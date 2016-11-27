@@ -1,0 +1,2614 @@
+/*!
+Animate.css - http://daneden.me/animate
+Licensed under the MIT license - http://opensource.org/licenses/MIT
+
+Copyright (c) 2015 Daniel Eden
+*/
+.animated{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;animation-fill-mode:both}.animated.infinite{-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite}.animated.hinge{-webkit-animation-duration:2s;animation-duration:2s}.animated.bounceIn,.animated.bounceOut,.animated.flipOutX,.animated.flipOutY{-webkit-animation-duration:.75s;animation-duration:.75s}@-webkit-keyframes bounce{20%,53%,80%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}40%,43%{-webkit-animation-timing-function:cubic-bezier(0.755,.050,.855,.060);animation-timing-function:cubic-bezier(0.755,.050,.855,.060);-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}70%{-webkit-animation-timing-function:cubic-bezier(0.755,.050,.855,.060);animation-timing-function:cubic-bezier(0.755,.050,.855,.060);-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}@keyframes bounce{20%,53%,80%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1);-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}40%,43%{-webkit-animation-timing-function:cubic-bezier(0.755,.050,.855,.060);animation-timing-function:cubic-bezier(0.755,.050,.855,.060);-webkit-transform:translate3d(0,-30px,0);transform:translate3d(0,-30px,0)}70%{-webkit-animation-timing-function:cubic-bezier(0.755,.050,.855,.060);animation-timing-function:cubic-bezier(0.755,.050,.855,.060);-webkit-transform:translate3d(0,-15px,0);transform:translate3d(0,-15px,0)}90%{-webkit-transform:translate3d(0,-4px,0);transform:translate3d(0,-4px,0)}}.bounce{-webkit-animation-name:bounce;animation-name:bounce;-webkit-transform-origin:center bottom;transform-origin:center bottom}@-webkit-keyframes flash{50%,from,to{opacity:1}25%,75%{opacity:0}}@keyframes flash{50%,from,to{opacity:1}25%,75%{opacity:0}}.flash{-webkit-animation-name:flash;animation-name:flash}@-webkit-keyframes pulse{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes pulse{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}50%{-webkit-transform:scale3d(1.05,1.05,1.05);transform:scale3d(1.05,1.05,1.05)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}.pulse{-webkit-animation-name:pulse;animation-name:pulse}@-webkit-keyframes rubberBand{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(0.75,1.25,1);transform:scale3d(0.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes rubberBand{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}30%{-webkit-transform:scale3d(1.25,.75,1);transform:scale3d(1.25,.75,1)}40%{-webkit-transform:scale3d(0.75,1.25,1);transform:scale3d(0.75,1.25,1)}50%{-webkit-transform:scale3d(1.15,.85,1);transform:scale3d(1.15,.85,1)}65%{-webkit-transform:scale3d(.95,1.05,1);transform:scale3d(.95,1.05,1)}75%{-webkit-transform:scale3d(1.05,.95,1);transform:scale3d(1.05,.95,1)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}.rubberBand{-webkit-animation-name:rubberBand;animation-name:rubberBand}@-webkit-keyframes shake{from,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}}@keyframes shake{from,to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}10%,30%,50%,70%,90%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}20%,40%,60%,80%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}}.shake{-webkit-animation-name:shake;animation-name:shake}@-webkit-keyframes swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}to{-webkit-transform:rotate3d(0,0,1,0deg);transform:rotate3d(0,0,1,0deg)}}@keyframes swing{20%{-webkit-transform:rotate3d(0,0,1,15deg);transform:rotate3d(0,0,1,15deg)}40%{-webkit-transform:rotate3d(0,0,1,-10deg);transform:rotate3d(0,0,1,-10deg)}60%{-webkit-transform:rotate3d(0,0,1,5deg);transform:rotate3d(0,0,1,5deg)}80%{-webkit-transform:rotate3d(0,0,1,-5deg);transform:rotate3d(0,0,1,-5deg)}to{-webkit-transform:rotate3d(0,0,1,0deg);transform:rotate3d(0,0,1,0deg)}}.swing{-webkit-transform-origin:top center;transform-origin:top center;-webkit-animation-name:swing;animation-name:swing}@-webkit-keyframes tada{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}10%,20%{-webkit-transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)}30%,50%,70%,90%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)}40%,60%,80%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes tada{from{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}10%,20%{-webkit-transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg);transform:scale3d(.9,.9,.9) rotate3d(0,0,1,-3deg)}30%,50%,70%,90%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg);transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,3deg)}40%,60%,80%{-webkit-transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg);transform:scale3d(1.1,1.1,1.1) rotate3d(0,0,1,-3deg)}to{-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}.tada{-webkit-animation-name:tada;animation-name:tada}@-webkit-keyframes wobble{from{-webkit-transform:none;transform:none}15%{-webkit-transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)}30%{-webkit-transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg);transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)}45%{-webkit-transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)}60%{-webkit-transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg);transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)}75%{-webkit-transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)}to{-webkit-transform:none;transform:none}}@keyframes wobble{from{-webkit-transform:none;transform:none}15%{-webkit-transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg);transform:translate3d(-25%,0,0) rotate3d(0,0,1,-5deg)}30%{-webkit-transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg);transform:translate3d(20%,0,0) rotate3d(0,0,1,3deg)}45%{-webkit-transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg);transform:translate3d(-15%,0,0) rotate3d(0,0,1,-3deg)}60%{-webkit-transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg);transform:translate3d(10%,0,0) rotate3d(0,0,1,2deg)}75%{-webkit-transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg);transform:translate3d(-5%,0,0) rotate3d(0,0,1,-1deg)}to{-webkit-transform:none;transform:none}}.wobble{-webkit-animation-name:wobble;animation-name:wobble}@-webkit-keyframes jello{11.1%,from,to{-webkit-transform:none;transform:none}22.2%{-webkit-transform:skewX(-12.5deg) skewY(-12.5deg);transform:skewX(-12.5deg) skewY(-12.5deg)}33.3%{-webkit-transform:skewX(6.25deg) skewY(6.25deg);transform:skewX(6.25deg) skewY(6.25deg)}44.4%{-webkit-transform:skewX(-3.125deg) skewY(-3.125deg);transform:skewX(-3.125deg) skewY(-3.125deg)}55.5%{-webkit-transform:skewX(1.5625deg) skewY(1.5625deg);transform:skewX(1.5625deg) skewY(1.5625deg)}66.6%{-webkit-transform:skewX(-.78125deg) skewY(-.78125deg);transform:skewX(-.78125deg) skewY(-.78125deg)}77.7%{-webkit-transform:skewX(0.390625deg) skewY(0.390625deg);transform:skewX(0.390625deg) skewY(0.390625deg)}88.8%{-webkit-transform:skewX(-.1953125deg) skewY(-.1953125deg);transform:skewX(-.1953125deg) skewY(-.1953125deg)}}@keyframes jello{11.1%,from,to{-webkit-transform:none;transform:none}22.2%{-webkit-transform:skewX(-12.5deg) skewY(-12.5deg);transform:skewX(-12.5deg) skewY(-12.5deg)}33.3%{-webkit-transform:skewX(6.25deg) skewY(6.25deg);transform:skewX(6.25deg) skewY(6.25deg)}44.4%{-webkit-transform:skewX(-3.125deg) skewY(-3.125deg);transform:skewX(-3.125deg) skewY(-3.125deg)}55.5%{-webkit-transform:skewX(1.5625deg) skewY(1.5625deg);transform:skewX(1.5625deg) skewY(1.5625deg)}66.6%{-webkit-transform:skewX(-.78125deg) skewY(-.78125deg);transform:skewX(-.78125deg) skewY(-.78125deg)}77.7%{-webkit-transform:skewX(0.390625deg) skewY(0.390625deg);transform:skewX(0.390625deg) skewY(0.390625deg)}88.8%{-webkit-transform:skewX(-.1953125deg) skewY(-.1953125deg);transform:skewX(-.1953125deg) skewY(-.1953125deg)}}.jello{-webkit-animation-name:jello;animation-name:jello;-webkit-transform-origin:center;transform-origin:center}@-webkit-keyframes bounceIn{20%,40%,60%,80%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}@keyframes bounceIn{20%,40%,60%,80%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}20%{-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}40%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}60%{opacity:1;-webkit-transform:scale3d(1.03,1.03,1.03);transform:scale3d(1.03,1.03,1.03)}80%{-webkit-transform:scale3d(.97,.97,.97);transform:scale3d(.97,.97,.97)}to{opacity:1;-webkit-transform:scale3d(1,1,1);transform:scale3d(1,1,1)}}.bounceIn{-webkit-animation-name:bounceIn;animation-name:bounceIn}@-webkit-keyframes bounceInDown{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,-3000px,0);transform:translate3d(0,-3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}75%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}to{-webkit-transform:none;transform:none}}@keyframes bounceInDown{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(0,-3000px,0);transform:translate3d(0,-3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,25px,0);transform:translate3d(0,25px,0)}75%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}90%{-webkit-transform:translate3d(0,5px,0);transform:translate3d(0,5px,0)}to{-webkit-transform:none;transform:none}}.bounceInDown{-webkit-animation-name:bounceInDown;animation-name:bounceInDown}@-webkit-keyframes bounceInLeft{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(-3000px,0,0);transform:translate3d(-3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(25px,0,0);transform:translate3d(25px,0,0)}75%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}90%{-webkit-transform:translate3d(5px,0,0);transform:translate3d(5px,0,0)}to{-webkit-transform:none;transform:none}}@keyframes bounceInLeft{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}0%{opacity:0;-webkit-transform:translate3d(-3000px,0,0);transform:translate3d(-3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(25px,0,0);transform:translate3d(25px,0,0)}75%{-webkit-transform:translate3d(-10px,0,0);transform:translate3d(-10px,0,0)}90%{-webkit-transform:translate3d(5px,0,0);transform:translate3d(5px,0,0)}to{-webkit-transform:none;transform:none}}.bounceInLeft{-webkit-animation-name:bounceInLeft;animation-name:bounceInLeft}@-webkit-keyframes bounceInRight{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}from{opacity:0;-webkit-transform:translate3d(3000px,0,0);transform:translate3d(3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(-25px,0,0);transform:translate3d(-25px,0,0)}75%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}90%{-webkit-transform:translate3d(-5px,0,0);transform:translate3d(-5px,0,0)}to{-webkit-transform:none;transform:none}}@keyframes bounceInRight{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}from{opacity:0;-webkit-transform:translate3d(3000px,0,0);transform:translate3d(3000px,0,0)}60%{opacity:1;-webkit-transform:translate3d(-25px,0,0);transform:translate3d(-25px,0,0)}75%{-webkit-transform:translate3d(10px,0,0);transform:translate3d(10px,0,0)}90%{-webkit-transform:translate3d(-5px,0,0);transform:translate3d(-5px,0,0)}to{-webkit-transform:none;transform:none}}.bounceInRight{-webkit-animation-name:bounceInRight;animation-name:bounceInRight}@-webkit-keyframes bounceInUp{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}from{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes bounceInUp{60%,75%,90%,from,to{-webkit-animation-timing-function:cubic-bezier(0.215,.61,.355,1);animation-timing-function:cubic-bezier(0.215,.61,.355,1)}from{opacity:0;-webkit-transform:translate3d(0,3000px,0);transform:translate3d(0,3000px,0)}60%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}75%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}90%{-webkit-transform:translate3d(0,-5px,0);transform:translate3d(0,-5px,0)}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.bounceInUp{-webkit-animation-name:bounceInUp;animation-name:bounceInUp}@-webkit-keyframes bounceOut{20%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}50%,55%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}to{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}}@keyframes bounceOut{20%{-webkit-transform:scale3d(.9,.9,.9);transform:scale3d(.9,.9,.9)}50%,55%{opacity:1;-webkit-transform:scale3d(1.1,1.1,1.1);transform:scale3d(1.1,1.1,1.1)}to{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}}.bounceOut{-webkit-animation-name:bounceOut;animation-name:bounceOut}@-webkit-keyframes bounceOutDown{20%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}40%,45%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}}@keyframes bounceOutDown{20%{-webkit-transform:translate3d(0,10px,0);transform:translate3d(0,10px,0)}40%,45%{opacity:1;-webkit-transform:translate3d(0,-20px,0);transform:translate3d(0,-20px,0)}to{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}}.bounceOutDown{-webkit-animation-name:bounceOutDown;animation-name:bounceOutDown}@-webkit-keyframes bounceOutLeft{20%{opacity:1;-webkit-transform:translate3d(20px,0,0);transform:translate3d(20px,0,0)}to{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}}@keyframes bounceOutLeft{20%{opacity:1;-webkit-transform:translate3d(20px,0,0);transform:translate3d(20px,0,0)}to{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}}.bounceOutLeft{-webkit-animation-name:bounceOutLeft;animation-name:bounceOutLeft}@-webkit-keyframes bounceOutRight{20%{opacity:1;-webkit-transform:translate3d(-20px,0,0);transform:translate3d(-20px,0,0)}to{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}}@keyframes bounceOutRight{20%{opacity:1;-webkit-transform:translate3d(-20px,0,0);transform:translate3d(-20px,0,0)}to{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}}.bounceOutRight{-webkit-animation-name:bounceOutRight;animation-name:bounceOutRight}@-webkit-keyframes bounceOutUp{20%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}40%,45%{opacity:1;-webkit-transform:translate3d(0,20px,0);transform:translate3d(0,20px,0)}to{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}}@keyframes bounceOutUp{20%{-webkit-transform:translate3d(0,-10px,0);transform:translate3d(0,-10px,0)}40%,45%{opacity:1;-webkit-transform:translate3d(0,20px,0);transform:translate3d(0,20px,0)}to{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}}.bounceOutUp{-webkit-animation-name:bounceOutUp;animation-name:bounceOutUp}@-webkit-keyframes fadeIn{from{opacity:0}to{opacity:1}}@keyframes fadeIn{from{opacity:0}to{opacity:1}}.fadeIn{-webkit-animation-name:fadeIn;animation-name:fadeIn}@-webkit-keyframes fadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInDown{from{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInDown{-webkit-animation-name:fadeInDown;animation-name:fadeInDown}@-webkit-keyframes fadeInDownBig{from{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInDownBig{from{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInDownBig{-webkit-animation-name:fadeInDownBig;animation-name:fadeInDownBig}@-webkit-keyframes fadeInLeft{from{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInLeft{from{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInLeft{-webkit-animation-name:fadeInLeft;animation-name:fadeInLeft}@-webkit-keyframes fadeInLeftBig{from{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInLeftBig{from{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInLeftBig{-webkit-animation-name:fadeInLeftBig;animation-name:fadeInLeftBig}@-webkit-keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInRight{from{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight}@-webkit-keyframes fadeInRightBig{from{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInRightBig{from{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInRightBig{-webkit-animation-name:fadeInRightBig;animation-name:fadeInRightBig}@-webkit-keyframes fadeInUp{from{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInUp{from{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInUp{-webkit-animation-name:fadeInUp;animation-name:fadeInUp}@-webkit-keyframes fadeInUpBig{from{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes fadeInUpBig{from{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}to{opacity:1;-webkit-transform:none;transform:none}}.fadeInUpBig{-webkit-animation-name:fadeInUpBig;animation-name:fadeInUpBig}@-webkit-keyframes fadeOut{from{opacity:1}to{opacity:0}}@keyframes fadeOut{from{opacity:1}to{opacity:0}}.fadeOut{-webkit-animation-name:fadeOut;animation-name:fadeOut}@-webkit-keyframes fadeOutDown{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@keyframes fadeOutDown{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}.fadeOutDown{-webkit-animation-name:fadeOutDown;animation-name:fadeOutDown}@-webkit-keyframes fadeOutDownBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}}@keyframes fadeOutDownBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,2000px,0);transform:translate3d(0,2000px,0)}}.fadeOutDownBig{-webkit-animation-name:fadeOutDownBig;animation-name:fadeOutDownBig}@-webkit-keyframes fadeOutLeft{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@keyframes fadeOutLeft{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}.fadeOutLeft{-webkit-animation-name:fadeOutLeft;animation-name:fadeOutLeft}@-webkit-keyframes fadeOutLeftBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}}@keyframes fadeOutLeftBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(-2000px,0,0);transform:translate3d(-2000px,0,0)}}.fadeOutLeftBig{-webkit-animation-name:fadeOutLeftBig;animation-name:fadeOutLeftBig}@-webkit-keyframes fadeOutRight{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}@keyframes fadeOutRight{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.fadeOutRight{-webkit-animation-name:fadeOutRight;animation-name:fadeOutRight}@-webkit-keyframes fadeOutRightBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}}@keyframes fadeOutRightBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(2000px,0,0);transform:translate3d(2000px,0,0)}}.fadeOutRightBig{-webkit-animation-name:fadeOutRightBig;animation-name:fadeOutRightBig}@-webkit-keyframes fadeOutUp{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes fadeOutUp{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}.fadeOutUp{-webkit-animation-name:fadeOutUp;animation-name:fadeOutUp}@-webkit-keyframes fadeOutUpBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}}@keyframes fadeOutUpBig{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(0,-2000px,0);transform:translate3d(0,-2000px,0)}}.fadeOutUpBig{-webkit-animation-name:fadeOutUpBig;animation-name:fadeOutUpBig}@-webkit-keyframes flip{from{-webkit-transform:perspective(400px) rotate3d(0,1,0,-360deg);transform:perspective(400px) rotate3d(0,1,0,-360deg);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}40%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg);transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}50%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg);transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:perspective(400px) scale3d(.95,.95,.95);transform:perspective(400px) scale3d(.95,.95,.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}to{-webkit-transform:perspective(400px);transform:perspective(400px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}}@keyframes flip{from{-webkit-transform:perspective(400px) rotate3d(0,1,0,-360deg);transform:perspective(400px) rotate3d(0,1,0,-360deg);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}40%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg);transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-190deg);-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}50%{-webkit-transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg);transform:perspective(400px) translate3d(0,0,150px) rotate3d(0,1,0,-170deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}80%{-webkit-transform:perspective(400px) scale3d(.95,.95,.95);transform:perspective(400px) scale3d(.95,.95,.95);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}to{-webkit-transform:perspective(400px);transform:perspective(400px);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}}.animated.flip{-webkit-backface-visibility:visible;backface-visibility:visible;-webkit-animation-name:flip;animation-name:flip}@-webkit-keyframes flipInX{from{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}to{-webkit-transform:perspective(400px);transform:perspective(400px)}}@keyframes flipInX{from{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(1,0,0,10deg);transform:perspective(400px) rotate3d(1,0,0,10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-5deg);transform:perspective(400px) rotate3d(1,0,0,-5deg)}to{-webkit-transform:perspective(400px);transform:perspective(400px)}}.flipInX{-webkit-backface-visibility:visible!important;backface-visibility:visible!important;-webkit-animation-name:flipInX;animation-name:flipInX}@-webkit-keyframes flipInY{from{-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}to{-webkit-transform:perspective(400px);transform:perspective(400px)}}@keyframes flipInY{from{-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in;opacity:0}40%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-20deg);transform:perspective(400px) rotate3d(0,1,0,-20deg);-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}60%{-webkit-transform:perspective(400px) rotate3d(0,1,0,10deg);transform:perspective(400px) rotate3d(0,1,0,10deg);opacity:1}80%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-5deg);transform:perspective(400px) rotate3d(0,1,0,-5deg)}to{-webkit-transform:perspective(400px);transform:perspective(400px)}}.flipInY{-webkit-backface-visibility:visible!important;backface-visibility:visible!important;-webkit-animation-name:flipInY;animation-name:flipInY}@-webkit-keyframes flipOutX{from{-webkit-transform:perspective(400px);transform:perspective(400px)}30%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);opacity:1}to{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);opacity:0}}@keyframes flipOutX{from{-webkit-transform:perspective(400px);transform:perspective(400px)}30%{-webkit-transform:perspective(400px) rotate3d(1,0,0,-20deg);transform:perspective(400px) rotate3d(1,0,0,-20deg);opacity:1}to{-webkit-transform:perspective(400px) rotate3d(1,0,0,90deg);transform:perspective(400px) rotate3d(1,0,0,90deg);opacity:0}}.flipOutX{-webkit-animation-name:flipOutX;animation-name:flipOutX;-webkit-backface-visibility:visible!important;backface-visibility:visible!important}@-webkit-keyframes flipOutY{from{-webkit-transform:perspective(400px);transform:perspective(400px)}30%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-15deg);transform:perspective(400px) rotate3d(0,1,0,-15deg);opacity:1}to{-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);opacity:0}}@keyframes flipOutY{from{-webkit-transform:perspective(400px);transform:perspective(400px)}30%{-webkit-transform:perspective(400px) rotate3d(0,1,0,-15deg);transform:perspective(400px) rotate3d(0,1,0,-15deg);opacity:1}to{-webkit-transform:perspective(400px) rotate3d(0,1,0,90deg);transform:perspective(400px) rotate3d(0,1,0,90deg);opacity:0}}.flipOutY{-webkit-backface-visibility:visible!important;backface-visibility:visible!important;-webkit-animation-name:flipOutY;animation-name:flipOutY}@-webkit-keyframes lightSpeedIn{from{-webkit-transform:translate3d(100%,0,0) skewX(-30deg);transform:translate3d(100%,0,0) skewX(-30deg);opacity:0}60%{-webkit-transform:skewX(20deg);transform:skewX(20deg);opacity:1}80%{-webkit-transform:skewX(-5deg);transform:skewX(-5deg);opacity:1}to{-webkit-transform:none;transform:none;opacity:1}}@keyframes lightSpeedIn{from{-webkit-transform:translate3d(100%,0,0) skewX(-30deg);transform:translate3d(100%,0,0) skewX(-30deg);opacity:0}60%{-webkit-transform:skewX(20deg);transform:skewX(20deg);opacity:1}80%{-webkit-transform:skewX(-5deg);transform:skewX(-5deg);opacity:1}to{-webkit-transform:none;transform:none;opacity:1}}.lightSpeedIn{-webkit-animation-name:lightSpeedIn;animation-name:lightSpeedIn;-webkit-animation-timing-function:ease-out;animation-timing-function:ease-out}@-webkit-keyframes lightSpeedOut{from{opacity:1}to{-webkit-transform:translate3d(100%,0,0) skewX(30deg);transform:translate3d(100%,0,0) skewX(30deg);opacity:0}}@keyframes lightSpeedOut{from{opacity:1}to{-webkit-transform:translate3d(100%,0,0) skewX(30deg);transform:translate3d(100%,0,0) skewX(30deg);opacity:0}}.lightSpeedOut{-webkit-animation-name:lightSpeedOut;animation-name:lightSpeedOut;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}@-webkit-keyframes rotateIn{from{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:rotate3d(0,0,1,-200deg);transform:rotate3d(0,0,1,-200deg);opacity:0}to{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:none;transform:none;opacity:1}}@keyframes rotateIn{from{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:rotate3d(0,0,1,-200deg);transform:rotate3d(0,0,1,-200deg);opacity:0}to{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:none;transform:none;opacity:1}}.rotateIn{-webkit-animation-name:rotateIn;animation-name:rotateIn}@-webkit-keyframes rotateInDownLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:none;transform:none;opacity:1}}@keyframes rotateInDownLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:none;transform:none;opacity:1}}.rotateInDownLeft{-webkit-animation-name:rotateInDownLeft;animation-name:rotateInDownLeft}@-webkit-keyframes rotateInDownRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:none;transform:none;opacity:1}}@keyframes rotateInDownRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:none;transform:none;opacity:1}}.rotateInDownRight{-webkit-animation-name:rotateInDownRight;animation-name:rotateInDownRight}@-webkit-keyframes rotateInUpLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:none;transform:none;opacity:1}}@keyframes rotateInUpLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:none;transform:none;opacity:1}}.rotateInUpLeft{-webkit-animation-name:rotateInUpLeft;animation-name:rotateInUpLeft}@-webkit-keyframes rotateInUpRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,-90deg);transform:rotate3d(0,0,1,-90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:none;transform:none;opacity:1}}@keyframes rotateInUpRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,-90deg);transform:rotate3d(0,0,1,-90deg);opacity:0}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:none;transform:none;opacity:1}}.rotateInUpRight{-webkit-animation-name:rotateInUpRight;animation-name:rotateInUpRight}@-webkit-keyframes rotateOut{from{-webkit-transform-origin:center;transform-origin:center;opacity:1}to{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:rotate3d(0,0,1,200deg);transform:rotate3d(0,0,1,200deg);opacity:0}}@keyframes rotateOut{from{-webkit-transform-origin:center;transform-origin:center;opacity:1}to{-webkit-transform-origin:center;transform-origin:center;-webkit-transform:rotate3d(0,0,1,200deg);transform:rotate3d(0,0,1,200deg);opacity:0}}.rotateOut{-webkit-animation-name:rotateOut;animation-name:rotateOut}@-webkit-keyframes rotateOutDownLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;opacity:1}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}}@keyframes rotateOutDownLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;opacity:1}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,45deg);transform:rotate3d(0,0,1,45deg);opacity:0}}.rotateOutDownLeft{-webkit-animation-name:rotateOutDownLeft;animation-name:rotateOutDownLeft}@-webkit-keyframes rotateOutDownRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;opacity:1}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}}@keyframes rotateOutDownRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;opacity:1}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}}.rotateOutDownRight{-webkit-animation-name:rotateOutDownRight;animation-name:rotateOutDownRight}@-webkit-keyframes rotateOutUpLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;opacity:1}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}}@keyframes rotateOutUpLeft{from{-webkit-transform-origin:left bottom;transform-origin:left bottom;opacity:1}to{-webkit-transform-origin:left bottom;transform-origin:left bottom;-webkit-transform:rotate3d(0,0,1,-45deg);transform:rotate3d(0,0,1,-45deg);opacity:0}}.rotateOutUpLeft{-webkit-animation-name:rotateOutUpLeft;animation-name:rotateOutUpLeft}@-webkit-keyframes rotateOutUpRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;opacity:1}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,90deg);transform:rotate3d(0,0,1,90deg);opacity:0}}@keyframes rotateOutUpRight{from{-webkit-transform-origin:right bottom;transform-origin:right bottom;opacity:1}to{-webkit-transform-origin:right bottom;transform-origin:right bottom;-webkit-transform:rotate3d(0,0,1,90deg);transform:rotate3d(0,0,1,90deg);opacity:0}}.rotateOutUpRight{-webkit-animation-name:rotateOutUpRight;animation-name:rotateOutUpRight}@-webkit-keyframes hinge{0%{-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}20%,60%{-webkit-transform:rotate3d(0,0,1,80deg);transform:rotate3d(0,0,1,80deg);-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}40%,80%{-webkit-transform:rotate3d(0,0,1,60deg);transform:rotate3d(0,0,1,60deg);-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;opacity:1}to{-webkit-transform:translate3d(0,700px,0);transform:translate3d(0,700px,0);opacity:0}}@keyframes hinge{0%{-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}20%,60%{-webkit-transform:rotate3d(0,0,1,80deg);transform:rotate3d(0,0,1,80deg);-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out}40%,80%{-webkit-transform:rotate3d(0,0,1,60deg);transform:rotate3d(0,0,1,60deg);-webkit-transform-origin:top left;transform-origin:top left;-webkit-animation-timing-function:ease-in-out;animation-timing-function:ease-in-out;opacity:1}to{-webkit-transform:translate3d(0,700px,0);transform:translate3d(0,700px,0);opacity:0}}.hinge{-webkit-animation-name:hinge;animation-name:hinge}@-webkit-keyframes rollIn{from{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1;-webkit-transform:none;transform:none}}@keyframes rollIn{from{opacity:0;-webkit-transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg);transform:translate3d(-100%,0,0) rotate3d(0,0,1,-120deg)}to{opacity:1;-webkit-transform:none;transform:none}}.rollIn{-webkit-animation-name:rollIn;animation-name:rollIn}@-webkit-keyframes rollOut{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0) rotate3d(0,0,1,120deg);transform:translate3d(100%,0,0) rotate3d(0,0,1,120deg)}}@keyframes rollOut{from{opacity:1}to{opacity:0;-webkit-transform:translate3d(100%,0,0) rotate3d(0,0,1,120deg);transform:translate3d(100%,0,0) rotate3d(0,0,1,120deg)}}.rollOut{-webkit-animation-name:rollOut;animation-name:rollOut}@-webkit-keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes zoomIn{from{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}50%{opacity:1}}.zoomIn{-webkit-animation-name:zoomIn;animation-name:zoomIn}@-webkit-keyframes zoomInDown{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomInDown{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomInDown{-webkit-animation-name:zoomInDown;animation-name:zoomInDown}@-webkit-keyframes zoomInLeft{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(-1000px,0,0);transform:scale3d(.1,.1,.1) translate3d(-1000px,0,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(10px,0,0);transform:scale3d(.475,.475,.475) translate3d(10px,0,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomInLeft{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(-1000px,0,0);transform:scale3d(.1,.1,.1) translate3d(-1000px,0,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(10px,0,0);transform:scale3d(.475,.475,.475) translate3d(10px,0,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomInLeft{-webkit-animation-name:zoomInLeft;animation-name:zoomInLeft}@-webkit-keyframes zoomInRight{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(1000px,0,0);transform:scale3d(.1,.1,.1) translate3d(1000px,0,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(-10px,0,0);transform:scale3d(.475,.475,.475) translate3d(-10px,0,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomInRight{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(1000px,0,0);transform:scale3d(.1,.1,.1) translate3d(1000px,0,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(-10px,0,0);transform:scale3d(.475,.475,.475) translate3d(-10px,0,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomInRight{-webkit-animation-name:zoomInRight;animation-name:zoomInRight}@-webkit-keyframes zoomInUp{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomInUp{from{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);transform:scale3d(.1,.1,.1) translate3d(0,1000px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}60%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomInUp{-webkit-animation-name:zoomInUp;animation-name:zoomInUp}@-webkit-keyframes zoomOut{from{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}to{opacity:0}}@keyframes zoomOut{from{opacity:1}50%{opacity:0;-webkit-transform:scale3d(.3,.3,.3);transform:scale3d(.3,.3,.3)}to{opacity:0}}.zoomOut{-webkit-animation-name:zoomOut;animation-name:zoomOut}@-webkit-keyframes zoomOutDown{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}to{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,2000px,0);transform:scale3d(.1,.1,.1) translate3d(0,2000px,0);-webkit-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomOutDown{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);transform:scale3d(.475,.475,.475) translate3d(0,-60px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}to{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,2000px,0);transform:scale3d(.1,.1,.1) translate3d(0,2000px,0);-webkit-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomOutDown{-webkit-animation-name:zoomOutDown;animation-name:zoomOutDown}@-webkit-keyframes zoomOutLeft{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(42px,0,0);transform:scale3d(.475,.475,.475) translate3d(42px,0,0)}to{opacity:0;-webkit-transform:scale(.1) translate3d(-2000px,0,0);transform:scale(.1) translate3d(-2000px,0,0);-webkit-transform-origin:left center;transform-origin:left center}}@keyframes zoomOutLeft{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(42px,0,0);transform:scale3d(.475,.475,.475) translate3d(42px,0,0)}to{opacity:0;-webkit-transform:scale(.1) translate3d(-2000px,0,0);transform:scale(.1) translate3d(-2000px,0,0);-webkit-transform-origin:left center;transform-origin:left center}}.zoomOutLeft{-webkit-animation-name:zoomOutLeft;animation-name:zoomOutLeft}@-webkit-keyframes zoomOutRight{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(-42px,0,0);transform:scale3d(.475,.475,.475) translate3d(-42px,0,0)}to{opacity:0;-webkit-transform:scale(.1) translate3d(2000px,0,0);transform:scale(.1) translate3d(2000px,0,0);-webkit-transform-origin:right center;transform-origin:right center}}@keyframes zoomOutRight{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(-42px,0,0);transform:scale3d(.475,.475,.475) translate3d(-42px,0,0)}to{opacity:0;-webkit-transform:scale(.1) translate3d(2000px,0,0);transform:scale(.1) translate3d(2000px,0,0);-webkit-transform-origin:right center;transform-origin:right center}}.zoomOutRight{-webkit-animation-name:zoomOutRight;animation-name:zoomOutRight}@-webkit-keyframes zoomOutUp{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}to{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);-webkit-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}@keyframes zoomOutUp{40%{opacity:1;-webkit-transform:scale3d(.475,.475,.475) translate3d(0,60px,0);transform:scale3d(.475,.475,.475) translate3d(0,60px,0);-webkit-animation-timing-function:cubic-bezier(0.55,.055,.675,.19);animation-timing-function:cubic-bezier(0.55,.055,.675,.19)}to{opacity:0;-webkit-transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);transform:scale3d(.1,.1,.1) translate3d(0,-2000px,0);-webkit-transform-origin:center bottom;transform-origin:center bottom;-webkit-animation-timing-function:cubic-bezier(0.175,.885,.32,1);animation-timing-function:cubic-bezier(0.175,.885,.32,1)}}.zoomOutUp{-webkit-animation-name:zoomOutUp;animation-name:zoomOutUp}@-webkit-keyframes slideInDown{from{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes slideInDown{from{-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.slideInDown{-webkit-animation-name:slideInDown;animation-name:slideInDown}@-webkit-keyframes slideInLeft{from{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes slideInLeft{from{-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.slideInLeft{-webkit-animation-name:slideInLeft;animation-name:slideInLeft}@-webkit-keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes slideInRight{from{-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.slideInRight{-webkit-animation-name:slideInRight;animation-name:slideInRight}@-webkit-keyframes slideInUp{from{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}@keyframes slideInUp{from{-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0);visibility:visible}to{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}}.slideInUp{-webkit-animation-name:slideInUp;animation-name:slideInUp}@-webkit-keyframes slideOutDown{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}@keyframes slideOutDown{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}}.slideOutDown{-webkit-animation-name:slideOutDown;animation-name:slideOutDown}@-webkit-keyframes slideOutLeft{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}@keyframes slideOutLeft{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(-100%,0,0);transform:translate3d(-100%,0,0)}}.slideOutLeft{-webkit-animation-name:slideOutLeft;animation-name:slideOutLeft}@-webkit-keyframes slideOutRight{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}@keyframes slideOutRight{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(100%,0,0);transform:translate3d(100%,0,0)}}.slideOutRight{-webkit-animation-name:slideOutRight;animation-name:slideOutRight}@-webkit-keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}@keyframes slideOutUp{from{-webkit-transform:translate3d(0,0,0);transform:translate3d(0,0,0)}to{visibility:hidden;-webkit-transform:translate3d(0,-100%,0);transform:translate3d(0,-100%,0)}}.slideOutUp{-webkit-animation-name:slideOutUp;animation-name:slideOutUp}
+/* line 1, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/calculations.scss */
+body {
+  overflow: scroll !important;
+}
+
+/* line 5, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/calculations.scss */
+.btn-viewing {
+  padding: 6px 25px !important;
+}
+/*
+ * jQuery FlexSlider v2.5.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 and later license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ * 
+ */
+/* ====================================================================================================================
+ * FONT-FACE
+ * ====================================================================================================================*/
+
+@font-face {
+  font-family: 'flexslider-icon';
+  src: url('../fonts/flexslider-icon.eot');
+  src: url('../fonts/flexslider-icon.eot?#iefix') format('embedded-opentype'), url('../fonts/flexslider-icon.woff') format('woff'), url('../fonts/flexslider-icon.ttf') format('truetype'), url('../fonts/flexslider-icon.svg#flexslider-icon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ====================================================================================================================
+ * RESETS
+ * ====================================================================================================================*/
+.flex-container a:hover,
+.flex-slider a:hover,
+.flex-container a:focus,
+.flex-slider a:focus {
+  outline: none;
+}
+.slides,
+.slides > li,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+/* ====================================================================================================================
+ * BASE STYLES
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+.flexslider .slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+html[xmlns] .flexslider .slides {
+  display: block;
+}
+* html .flexslider .slides {
+  height: 1%;
+}
+.no-js .flexslider .slides > li:first-child {
+  display: block;
+}
+/* ====================================================================================================================
+ * DEFAULT THEME
+ * ====================================================================================================================*/
+.flexslider {
+  margin: 0 0 60px;
+  background: #ffffff;
+  border: 4px solid #ffffff;
+  position: relative;
+  zoom: 1;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: '' 0 1px 4px rgba(0, 0, 0, 0.2);
+}
+.flexslider .slides {
+  zoom: 1;
+}
+.flexslider .slides img {
+  height: auto;
+}
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.loading .flex-viewport {
+  max-height: 300px;
+}
+.carousel li {
+  margin-right: 5px;
+}
+.flex-direction-nav {
+  *height: 0;
+}
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+}
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+.flexslider:hover .flex-direction-nav .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-prev:hover {
+  opacity: 1;
+}
+.flexslider:hover .flex-direction-nav .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+.flexslider:hover .flex-direction-nav .flex-next:hover {
+  opacity: 1;
+}
+.flex-direction-nav .flex-disabled {
+  opacity: 0!important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+}
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+.flex-control-thumbs img {
+  width: 100%;
+  height: auto;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+/* ====================================================================================================================
+ * RESPONSIVE
+ * ====================================================================================================================*/
+@media screen and (max-width: 860px) {
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+/* line 1, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/home.scss */
+.currency-select {
+  padding: 4px 26px !important;
+  margin: 0px !important;
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: #ccc;
+	outline: none;
+}
+
+
+.containers {
+	text-align: center;
+	padding: 2.25em 0.5em 0;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+/* 
+ * 	Core Owl Carousel CSS File
+ *	v1.3.3
+ */
+
+/* clearfix */
+
+.owl-carousel .owl-wrapper:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+/* display none until init */
+.owl-carousel{
+	display: none;
+	position: relative;
+	width: 100%;
+	-ms-touch-action: pan-y;
+}
+.owl-carousel .owl-wrapper{
+	display: none;
+	position: relative;
+	-webkit-transform: translate3d(0px, 0px, 0px);
+}
+.owl-carousel .owl-wrapper-outer{
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+}
+.owl-carousel .owl-wrapper-outer.autoHeight{
+	-webkit-transition: height 500ms ease-in-out;
+	-moz-transition: height 500ms ease-in-out;
+	-ms-transition: height 500ms ease-in-out;
+	-o-transition: height 500ms ease-in-out;
+	transition: height 500ms ease-in-out;
+}
+	
+.owl-carousel .owl-item{
+	float: left;
+}
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div{
+	cursor: pointer;
+}
+.owl-controls {
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* mouse grab icon */
+.grabbing { 
+    cursor:url(grabbing.png) 8 8, move;
+}
+
+/* fix */
+.owl-carousel  .owl-wrapper,
+.owl-carousel  .owl-item{
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:    hidden;
+	-ms-backface-visibility:     hidden;
+  -webkit-transform: translate3d(0,0,0);
+  -moz-transform: translate3d(0,0,0);
+  -ms-transform: translate3d(0,0,0);
+}
+
+/*
+* 	Owl Carousel Owl Demo Theme 
+*	v1.3.3
+*/
+
+
+.owl-theme .owl-controls{
+	margin-top: 10px;
+	text-align: center;
+}
+
+/* Styling Next and Prev buttons */
+
+.owl-theme .owl-controls .owl-buttons div{
+	color: #FFF;
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+	margin: 5px;
+	padding: 3px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	background: #869791;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+}
+/* Clickable class fix problem with hover on touch devices */
+/* Use it for non-touch hover action */
+.owl-theme .owl-controls.clickable .owl-buttons div:hover{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+	text-decoration: none;
+}
+
+/* Styling Pagination*/
+
+.owl-theme .owl-controls .owl-page{
+	display: inline-block;
+	zoom: 1;
+	*display: inline;/*IE7 life-saver */
+}
+.owl-theme .owl-controls .owl-page span{
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin: 5px 7px;
+	filter: Alpha(Opacity=50);/*IE7 fix*/
+	opacity: 0.5;
+	-webkit-border-radius: 20px;
+	-moz-border-radius: 20px;
+	border-radius: 20px;
+	background: #869791;
+}
+
+.owl-theme .owl-controls .owl-page.active span,
+.owl-theme .owl-controls.clickable .owl-page:hover span{
+	filter: Alpha(Opacity=100);/*IE7 fix*/
+	opacity: 1;
+}
+
+/* If PaginationNumbers is true */
+
+.owl-theme .owl-controls .owl-page span.owl-numbers{
+	height: auto;
+	width: auto;
+	color: #FFF;
+	padding: 2px 10px;
+	font-size: 12px;
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+}
+
+/* preloading images */
+.owl-item.loading{
+	min-height: 150px;
+	background: url(AjaxLoader.gif) no-repeat center center
+}
+/* line 1, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu {
+  position: fixed;
+  width: 300px;
+  top: 3em;
+  bottom: 3em;
+  left: 0;
+  z-index: 100;
+  overflow: hidden;
+  -webkit-transform: translate3d(-150px, 0, 0);
+  transform: translate3d(-150px, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+}
+
+/* line 15, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu.menu--open {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 20, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.main {
+  -webkit-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+/* line 25, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu.menu--open + .main {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+/* line 30, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__inner {
+  width: calc(100% + 25px);
+  padding: 0 140px 2em 0;
+  overflow-y: auto;
+  height: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+/* line 41, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 47, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li {
+  margin: 0 0 2em 0;
+  -webkit-transform: translate3d(-150px, 0, 0);
+  transform: translate3d(-150px, 0, 0);
+  -webkit-transition: -webkit-transform 0.6s;
+  transition: transform 0.6s;
+}
+
+/* line 55, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu.menu--anim ul li {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* line 60, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li:first-child {
+  -webkit-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+}
+
+/* line 65, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li:nth-child(2) {
+  -webkit-transition-delay: 0.2s;
+  transition-delay: 0.2s;
+}
+
+/* line 70, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li:nth-child(3) {
+  -webkit-transition-delay: 0.1s;
+  transition-delay: 0.1s;
+}
+
+/* line 75, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li a {
+  display: block;
+  outline: none;
+  text-decoration: none;
+}
+
+/* line 80, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li a:hover {
+  color: #999;
+}
+
+/* line 84, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li .fa {
+  font-size: 2.5em;
+  display: block;
+  margin: 0 auto;
+  color: #fff;
+}
+
+/* line 91, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li .fa:hover {
+  color: #ccc;
+}
+
+/* line 95, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu ul li span {
+  font-weight: 400;
+  font-size: 1em;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 101, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle {
+  background: rgba(47, 50, 56, 0);
+  border: none;
+  width: 30px;
+  height: 24px;
+  padding: 0;
+  outline: none;
+  position: absolute;
+  top: 3px;
+  right: 70px;
+  z-index: 2000;
+}
+
+/* line 114, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle::before,
+.menu__handle::after,
+.menu__handle span {
+  background: #fff;
+}
+
+/* line 120, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle::before,
+.menu__handle::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  top: 50%;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+  -webkit-transition: -webkit-transform 0.25s;
+  transition: transform 0.25s;
+}
+
+/* line 134, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle span {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  left: 0;
+  overflow: hidden;
+  text-indent: 200%;
+  -webkit-transition: opacity 0.25s;
+  transition: opacity 0.25s;
+}
+
+/* line 145, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle::before {
+  -webkit-transform: translate3d(0, -10px, 0);
+  transform: translate3d(0, -10px, 0);
+}
+
+/* line 150, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu__handle::after {
+  -webkit-transform: translate3d(0, 10px, 0);
+  transform: translate3d(0, 10px, 0);
+}
+
+/* line 155, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu--open .menu__handle span {
+  opacity: 0;
+}
+
+/* line 159, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu--open .menu__handle::before {
+  -webkit-transform: rotate3d(0, 0, 1, 45deg);
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+/* line 164, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.menu--open .menu__handle::after {
+  -webkit-transform: rotate3d(0, 0, 1, -45deg);
+  transform: rotate3d(0, 0, 1, -45deg);
+}
+
+/* line 169, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.morph-shape {
+  position: absolute;
+  width: 240px;
+  height: 100%;
+  top: 0;
+  right: 0;
+}
+
+/* line 177, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+.morph-shape svg path {
+  stroke: #fff;
+  stroke-width: 5px;
+}
+
+@media screen and (max-width: 63em) {
+  /* line 183, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+  .main {
+    padding: 0 2em;
+    -webkit-transition: opacity 0.6s;
+    transition: opacity 0.6s;
+  }
+
+  /* line 189, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+  .menu {
+    -webkit-transform: translate3d(-170px, 0, 0);
+    transform: translate3d(-170px, 0, 0);
+  }
+
+  /* line 194, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/sidebar.scss */
+  .menu.menu--open + .main {
+    opacity: 0.05;
+  }
+}
+/* ==================== CSS Structure ====================
+
+	 * 1.0 RESET STYLES
+	 * 2.0 BOOTSTRAP FIX FOR WINPHONR 8 AND IE10
+	 * 3.0 BASIC STYLES
+	 * 4.0 TYPOGRAOHY
+	 * 5.0 PRELOADER
+	 * 6.0 VIDEO BACKGROUND
+	 * 7.0 PARALLAX BACKGROUND
+	 * 7.1 TRIANGLIFY BACKGROUND
+	 *
+	 * 8.0 HEADER
+	 * 9.0 HOME SECTION - SLIDER
+	 * 9.1 - ABOUT SECTION - SLIDER
+	 * 9.2 - SERVICES SECTION - SLIDER
+	 * 9.3 - CONTACT SECTION - SLIDER
+	 * 9.4 - TEAM SECTION - SLIDER
+	 *
+	 * 10.0 CLOCK COUNTDOWN
+	 * 11.0 FLEXSLIDERS + TEXTSLIDERS
+	 * 12.0 FORMS
+	 * 13.0 FOOTER
+	 * 14.0 SOCIALS ICONS
+	 * 15.0 BUTTONS
+	 * 16.0 OVERLAY STYLES
+	 * 17.0 BACKGROUND COLOR STYLES
+	 * 18.0 SHORTCODES STYLES
+	 * 19.0 MS IE STYLES
+	 * 20. 0MOBILE STYLES
+	 * 21.0 RESPONSIVE STYLES
+
+========================================================== */
+/* ==================== 1.0 RESET STYLES ==================== */
+/* line 39, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ==================== 2.0 BOOTSTRAP FIX FOR WINPHONR 8 AND IE10  ==================== */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/* ==================== 3.0 BASIC STYLES ==================== */
+/* line 59, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body {
+  color: #fff;
+  background: #ffffff;
+  line-height: 1;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  white-space: normal;
+  position: relative;
+}
+
+/* line 75, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 79, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input,
+select,
+textarea {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ==================== 4.0 TYPOGRAOHY ==================== */
+/* line 91, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.2em;
+}
+
+/* line 97, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 62px;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+/* line 104, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  position: relative;
+}
+
+/* line 110, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+/* line 115, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+}
+
+/* line 120, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+/* line 125, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+/* line 130, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+p {
+  margin-bottom: 20px;
+}
+
+/* line 134, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+p.lead {
+  font-family: 'Raleway', sans-serif;
+  font-size: 21px;
+  padding: 0;
+  font-weight: 400;
+}
+
+/*, a > * {
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}*/
+/* line 151, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+a:hover, a > *:hover, a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 155, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+ul {
+  list-style: none;
+}
+
+/* line 158, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+em {
+  font-style: italic;
+}
+
+/* line 162, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 166, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 172, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.color-white {
+  color: #fff;
+}
+
+/* ==================== 5.0 PRELOADER ==================== */
+/* line 179, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 10001;
+}
+
+/* line 189, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#loading-animation {
+  width: 120px;
+  height: 128px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(/assets/loading-animation-d35536e158862aee6858cd1e8ab25001532ed7672b71d8204cd11017a27bc7bf.GIF);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -60px 0 0 -64px;
+}
+
+/* ==================== 6.0 VIDEO BACKGROUND ==================== */
+/* line 203, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.youtube-background {
+  background-color: #000;
+}
+
+/* line 207, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#video_background {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+/* ==================== 7.0 PARALLAX BACKGROUND ==================== */
+/* line 223, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.parallax-wallpaper {
+  left: -25%;
+  top: -25%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: -999999;
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  background-image: url(../images/bg/parallax-bg.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* ==================== 7.1 TRIANGLIFY BACKGROUND ==================== */
+/* line 240, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#gradient {
+  left: -25%;
+  top: -25%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: -999999;
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* ==================== 8.0 HEADER ==================== */
+/* line 256, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.logo-site {
+  margin: auto;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 264, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.logo-site img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 269, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.title-section {
+  text-align: center;
+  letter-spacing: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+}
+
+/* line 282, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.header-section {
+  padding-bottom: 0px;
+}
+
+/* ==================== 9.0 HOME SECTION - SLIDER ==================== */
+/* line 287, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  display: block;
+  padding: 150px 80px;
+  margin: 0;
+  z-index: 10;
+}
+
+/* line 298, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container-section {
+  z-index: 10;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  height: 100px;
+}
+
+/* line 307, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container-table {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 312, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container {
+  width: auto;
+}
+
+/* line 316, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1 {
+  margin-top: 30px;
+}
+
+/* line 320, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1,
+.main-site h2,
+.main-site h3,
+.main-site h4,
+.main-site h5,
+.main-site h6 {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* line 330, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1 {
+  font-size: 52px;
+}
+
+/* line 334, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h2 {
+  font-size: 42px;
+}
+
+/* line 338, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h3 {
+  font-size: 30px;
+}
+
+/* line 342, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.content-slide {
+  color: #fff;
+}
+
+/* line 345, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-slide {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: none;
+}
+
+/* line 351, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-slide.active {
+  display: block;
+}
+
+/* ==================== 9.1 ABOUT SECTION - SLIDER ==================== */
+/* line 357, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.aboutus {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 362, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.aboutus p {
+  text-align: left;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  padding-top: 35px;
+}
+
+/* line 368, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.pregress-bar {
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+}
+
+/* line 373, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.category-name {
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* line 383, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.progress-status {
+  float: right;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* line 388, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.skill-bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  clear: both;
+  margin: 20px 0;
+}
+
+/* line 397, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.skill-level {
+  display: table;
+  height: 5px;
+}
+
+/* line 401, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.planning, .programming, .developing, .supporting, .marketing {
+  background: #666;
+}
+
+/* line 404, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.about-heading h1 {
+  color: #e1e1e1 !important;
+}
+
+/* line 407, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.planning {
+  width: 90%;
+  -webkit-animation: planning 3s linear;
+  animation: planning 3s linear;
+}
+
+/* line 412, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.programming {
+  width: 80%;
+  -webkit-animation: programming 3s linear;
+  animation: programming 3s linear;
+}
+
+/* line 418, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.developing {
+  width: 70%;
+  -webkit-animation: developing 3s linear;
+  animation: developing 3s linear;
+}
+
+/* line 423, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.supporting {
+  width: 85%;
+  -webkit-animation: supporting 3s linear;
+  animation: supporting 3s linear;
+}
+
+/* line 428, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.marketing {
+  width: 70%;
+  -webkit-animation: marketing 3s linear;
+  animation: marketing 3s linear;
+}
+
+@-webkit-keyframes planning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes planning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes programming {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes programming {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-webkit-keyframes developing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes developing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@-webkit-keyframes supporting {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes supporting {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@-webkit-keyframes marketing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes marketing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+/* line 485, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-section {
+  position: relative;
+}
+
+/* line 488, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-video {
+  padding: 50px;
+}
+
+/* line 492, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-content iframe {
+  border: 0 !important;
+}
+
+/* line 495, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+iframe {
+  width: 450px;
+  height: 400px;
+  /*-webkitallowfullscreen : width:450px; height:400px;
+  -mozallowfullscreen : width:450px; height:400px;
+  -allowfullscreen : width:450px; height:400px;*/
+}
+
+/* ==================== 9.2 SERVICES SECTION - SLIDER ==================== */
+/* line 505, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* line 510, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-icon {
+  font-size: 40px;
+  color: #fff;
+  float: left;
+  width: 60px;
+  text-align: center;
+}
+
+/* line 518, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-icon:hover,
+.service-icon:focus {
+  color: #000;
+  background: #fff;
+  transition: all 1s;
+  transform: rotate(360deg);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+/* line 530, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-text {
+  margin-left: 70px;
+}
+
+/* line 534, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+/* line 538, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service h3:hover,
+.item-service h3:focus {
+  color: #999;
+}
+
+/* ==================== 9.3 CONTACT SECTION - SLIDER ==================== */
+/* line 547, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.maps-section {
+  position: relative;
+}
+
+/* line 550, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps {
+  padding: 50px;
+}
+
+/* line 553, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps ul {
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+/* line 557, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps li {
+  text-align: left;
+}
+
+/* line 561, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps li span {
+  color: #CCC;
+}
+
+/* line 564, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.maps-content {
+  border: 0 !important;
+}
+
+/* line 568, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-section {
+  position: relative;
+}
+
+/* line 572, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#map1 {
+  width: 450px;
+  height: 400px;
+  /*-webkit: width:450px; height:400px;
+  -moz: width:450px; height:400px;*/
+}
+
+/* ==================== 9.4 TEAM SECTION - SLIDER ==================== */
+/* line 581, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel {
+  background: rgba(84, 82, 82, 0.56);
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+/* line 587, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel img {
+  margin: 20px auto;
+}
+
+/* line 591, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel img:hover, img:focus {
+  color: rgba(255, 255, 255, 0.43);
+}
+
+/* line 595, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel a i {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* ==================== 10.0 CLOCK COUNTDOWN ==================== */
+/* line 604, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown {
+  color: #fff;
+  overflow: hidden;
+}
+
+/* line 609, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.counter-container {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 614, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown .counter-box {
+  display: block;
+  width: 160px;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 25px;
+  float: left;
+  margin: 25px 0;
+  position: relative;
+}
+
+/* line 625, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown .number {
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Monteserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* line 634, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown span {
+  display: block;
+  font-size: 21px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 645, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown span:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0px;
+}
+
+/* ==================== 11.0 FLEXSLIDERS + TEXTSLIDERS ==================== */
+/* line 660, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.flexslider.textslider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+  border: 0px solid #fff;
+  position: relative;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+
+/* line 677, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h1,
+.textslider h2,
+.textslider h3 {
+  text-transform: uppercase;
+}
+
+/* line 683, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h1 {
+  font-size: 82px;
+}
+
+/* line 687, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h2 {
+  font-size: 58px;
+}
+
+/* line 691, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h3 {
+  font-size: 40px;
+}
+
+/* ==================== 12.0 FORMS ==================== */
+/* line 697, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input, textarea, select {
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  -webkit-appearance: none;
+  color: #333;
+  padding: 11px 25px;
+  margin: 0px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.42857143;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -o-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+/* line 726, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  resize: both;
+  margin-top: 0px;
+  font-style: italic;
+  height: 150px;
+}
+
+/* line 735, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:hover, textarea:hover, select:hover {
+  color: #333;
+}
+
+/* line 739, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:focus, textarea:focus, select:focus {
+  color: #333;
+}
+
+/* line 743, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[type="submit"], button {
+  width: auto;
+  font-style: normal;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+}
+
+/* line 753, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[type="submit"]:hover, button:hover {
+  color: #333;
+}
+
+/* line 757, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+select, option {
+  cursor: pointer;
+}
+
+/* line 761, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #333;
+}
+
+/* line 763, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #333;
+}
+
+/* line 765, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input.placeholder, textarea.placeholder {
+  color: #333;
+}
+
+/* line 767, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+
+/* line 769, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+::-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+/* firefox 19+ */
+/* line 771, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+/* line 773, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.form {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 778, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.container-form {
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+/* line 785, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.note-form {
+  color: #333;
+  font-style: italic;
+  margin: 24px 0;
+}
+
+/* line 791, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-success {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+
+/* line 799, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-error {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+
+/* line 807, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-success,
+.message-error {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* line 814, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input[type="text"], .contact-form input[type="email"] {
+  width: 100%;
+}
+
+/* line 818, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input, .contact-form textarea, .contact-form select {
+  background: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 9px 20px;
+  margin: 0px;
+  font-style: italic;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -o-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  transition: background-color .3s ease, border .3s ease, color .3s ease;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 846, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form textarea {
+  margin-bottom: 18px;
+}
+
+/* line 850, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form .input-error {
+  border-color: #ed5555;
+}
+
+/* line 854, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form .response-message {
+  margin: 20px 0 30px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* WebKit browsers */
+/* line 862, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/* line 866, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+
+/* line 870, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+
+/* line 874, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+/* line 879, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 884, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form input {
+  float: left;
+  display: inline-block;
+  border: none;
+}
+
+/* line 890, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form input[type="email"] {
+  min-width: 270px;
+}
+
+/* line 894, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form button {
+  margin: 0 5px;
+  float: left;
+}
+
+/* line 898, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.top-margin {
+  margin-top: 0 !important;
+}
+
+/* line 901, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+/* ==================== 13.0 FOOTER ==================== */
+/* line 907, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.copy-right {
+  background: transparent;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 10000;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: position .5s ease;
+  -moz-transition: position .5s ease;
+  -ms-transition: position .5s ease;
+  -o-transition: position .5s ease;
+  transition: position .5s ease;
+}
+
+/* line 924, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.copyright {
+  line-height: 80px;
+  padding-left: 15px;
+}
+
+/* ==================== 14.0 SOCIALS ICONS ==================== */
+/* line 930, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: auto;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  z-index: 10;
+}
+
+/* line 942, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons ul {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+/* line 950, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li {
+  margin: 0;
+  display: block;
+  float: left;
+}
+
+/* line 956, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+
+/* line 963, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a i {
+  color: #fff;
+  line-height: 70px;
+  font-size: 21px;
+}
+
+/* line 969, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a:hover i {
+  color: #999;
+}
+
+/* ==================== 15.0 BUTTONS ==================== */
+/* line 975, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.default-button:focus,
+.sm-button:focus,
+.border-button:focus,
+.border-sm-button:focus {
+  outline: none;
+  outline-offset: 0px;
+  text-decoration: none;
+}
+
+/* line 987, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button {
+  display: inline-block !important;
+  background: #fff;
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  border-radius: 27px;
+  padding: 9px 50px;
+  color: #333;
+  line-height: 22px;
+  font-size: 16px;
+  outline: none;
+  outline-offset: 0px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* line 1009, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button:hover,
+.default-button:focus {
+  color: #333;
+  opacity: 0.8;
+}
+
+/* line 1015, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button i,
+.default-button:hover i,
+.default-button:focus i {
+  color: #333;
+}
+
+/* line 1021, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button {
+  display: inline-block !important;
+  background: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 9px 50px;
+  color: #fff;
+  line-height: 22px;
+  font-size: 16px;
+  outline: none;
+  outline-offset: 0px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* line 1044, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button:hover,
+.border-button:focus {
+  background: #fff;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* line 1051, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button i,
+.border-button:hover i,
+.border-button:focus i {
+  color: #333;
+}
+
+/* Transparent */
+/* line 1058, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent {
+  background: transparent;
+  color: #fff;
+}
+
+/* line 1063, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent:hover,
+.bt-transparent:focus {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* line 1069, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent i,
+.bt-transparent:hover i,
+.bt-transparent:focus i {
+  color: #fff;
+}
+
+/* ==================== 16.0 OVERLAY STYLES ==================== */
+/* line 1079, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: auto;
+}
+
+/* line 1095, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ==================== 17.0 BACKGROUND COLOR STYLES ==================== */
+/* line 1102, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.white-background {
+  background: #fff;
+}
+
+/* line 1105, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.dark-background {
+  background: #333;
+}
+
+/* line 1108, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.grey-background {
+  background: #666;
+}
+
+/* line 1111, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.blue-background {
+  background: #0b4ac8;
+}
+
+/* line 1114, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.blue-dark-background {
+  background: #052a75;
+}
+
+/* line 1117, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.brown-background {
+  background: #9C8061;
+}
+
+/* line 1120, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.red-background {
+  background: #FC331C;
+}
+
+/* line 1123, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.orange-background {
+  background: #EA8825;
+}
+
+/* line 1126, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.green-background {
+  background: #00AB66;
+}
+
+/* line 1129, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.violet-background {
+  background: #8C489F;
+}
+
+/* line 1132, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.yellow-background {
+  background: #E5C41A;
+}
+
+/* ==================== 18.0 SHORTCODES STYLES ==================== */
+/* line 1139, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate {
+  display: block;
+  margin-bottom: 30px;
+  width: 120px;
+  height: 18px;
+  position: relative;
+}
+
+/* line 1147, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate span {
+  display: block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* line 1156, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 8px;
+  width: 50px;
+  height: 2px;
+  margin: 0 !important;
+  float: left;
+}
+
+/* line 1167, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -10px;
+  width: 50px;
+  height: 2px;
+  margin: 0 !important;
+  float: right;
+}
+
+/* line 1178, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-white:before,
+.line-white:after {
+  background: #fff;
+}
+
+/* line 1183, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-white span {
+  box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+/* line 1187, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-center,
+.line-center:before,
+.line-center:after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1194, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-center span:before,
+.line-center span:after {
+  width: 90px;
+}
+
+/* ==================== 19.0 MS IE STYLES ==================== */
+/* line 1201, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.ie-10 .logo-site,
+.ie-11 .logo-site {
+  padding-top: 10px;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  /* line 1208, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .ie-10 .header-site,
+  .ie-11 .header-site {
+    display: block !important;
+  }
+
+  /* line 1213, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .ie-10 .default-button,
+  .ie-11 .default-button,
+  .ie-10 .border-button,
+  .ie-11 .border-button {
+    display: inline-block !important;
+  }
+}
+/* ==================== 20.0 MOBILE STYLES ==================== */
+/* line 1224, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body.mobile {
+  -webkit-text-size-adjust: none;
+}
+
+/* line 1228, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body.mobile .animated {
+  display: block;
+  visibility: visible;
+}
+
+/* line 1233, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.windowsphone .logo-site,
+.windowsphone .logo-site img {
+  display: block !important;
+  visibility: visible !important;
+  margin: 0 auto !important;
+}
+
+/* ==================== 21.0 RESPONSIVE STYLES ==================== */
+@media (min-width: 1300px) {
+  /* line 1244, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 991px) {
+  /* line 1251, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .page-container {
+    display: block;
+    vertical-align: middle;
+  }
+
+  /* line 1256, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site.fullscreen {
+    display: block;
+    height: auto;
+    padding: 200px 80px;
+  }
+
+  /* line 1262, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h1 {
+    font-size: 50px;
+  }
+
+  /* line 1266, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h2 {
+    font-size: 44px;
+  }
+
+  /* line 1270, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h3 {
+    font-size: 22px;
+  }
+
+  /* line 1273, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 30px;
+  }
+
+  /* line 1276, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 100px;
+  }
+
+  /* line 1279, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 120px;
+  }
+
+  /* line 1282, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #clock-countdown .counter-box {
+    width: 170px;
+    padding: 15px 15px;
+  }
+
+  /* line 1286, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: auto;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 10;
+  }
+
+  /* line 1298, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1306, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  /* line 1312, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-right: 0px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  /* line 1321, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a i {
+    color: #fff;
+    line-height: 80px;
+    font-size: 21px;
+  }
+
+  /* line 1326, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 300px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 1335, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .section {
+    text-align: center !important;
+  }
+
+  /* line 1339, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .header-section,
+  .tour-header {
+    padding-bottom: 40px;
+  }
+
+  /* line 1344, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .fullscreen .section-container {
+    display: block;
+  }
+
+  /* line 1348, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .section-container {
+    display: block;
+    height: auto;
+  }
+
+  /* line 1353, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .container-table {
+    display: block;
+  }
+
+  /* line 1357, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form input,
+  .sign-up-sign-in-form button {
+    float: none;
+  }
+
+  /* line 1362, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form button {
+    margin-top: 20px;
+  }
+
+  /* line 1366, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .line-separate,
+  .line-separate span:before,
+  .line-separate span:after {
+    margin: 0 auto;
+  }
+
+  /* line 1372, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .line-separate span:before,
+  .line-separate span:after {
+    width: 90px !important;
+  }
+
+  /* line 1377, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .counter-container {
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
+    border-left: 0;
+    border-right: 0;
+    padding: 0px;
+  }
+
+  /* line 1386, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #clock-countdown .counter-box {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+
+  /* line 1392, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: auto;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 10;
+  }
+
+  /* line 1404, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1412, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  /* line 1418, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-right: 0px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  /* line 1427, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a i {
+    color: #fff;
+    line-height: 80px;
+    font-size: 21px;
+  }
+
+  /* line 1433, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h1 {
+    font-size: 62px;
+  }
+
+  /* line 1437, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h2 {
+    font-size: 48px;
+  }
+
+  /* line 1441, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h3 {
+    font-size: 30px;
+  }
+
+  /* line 1445, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .item-service {
+    text-align: center;
+  }
+
+  /* line 1449, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .service-icon {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 1455, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .service-text {
+    margin-left: 0;
+  }
+
+  /* line 1458, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 100px;
+  }
+
+  /* line 1461, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 20px;
+  }
+
+  /* line 1464, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 100px;
+  }
+
+  /* line 1467, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  iframe {
+    width: 350px;
+    height: 300px;
+  }
+
+  /* line 1471, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #map1 {
+    width: 350px;
+    height: 300px;
+  }
+
+  /* line 1475, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 1483, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form input[type="email"] {
+    min-width: 200px;
+  }
+
+  /* line 1487, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form button {
+    min-width: 150px;
+  }
+
+  /* line 1491, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .copyright {
+    line-height: 50px;
+  }
+
+  /* line 1494, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 20px;
+  }
+
+  /* line 1497, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  iframe {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* line 1501, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #map1 {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* line 1505, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 10px;
+  }
+
+  /* line 1508, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 50px;
+  }
+
+  /* line 1511, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site.fullscreen {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1516, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1524, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0px 10px;
+    display: inline-block;
+    float: none;
+  }
+
+  /* line 1529, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 20px;
+  }
+}
+/* ==================== 22.0 GRAPH PAGES BACKGROUND COLOR STYLES ==================== */
+/* line 1536, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay-modify {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: linear-gradient(11deg, #3ed9b1, #2a8a8a, #36dcdd, #3692dd);
+  background-size: 800% 800%;
+  overflow: auto !important;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.vegas-overlay,.vegas-slide,.vegas-slide-inner,.vegas-timer,.vegas-wrapper{position:absolute;top:0;left:0;bottom:0;right:0;overflow:hidden;border:none;padding:0;margin:0}.vegas-overlay{opacity:.5;background:url(overlays/02.png) center center}.vegas-timer{top:auto;bottom:0;height:2px}.vegas-timer-progress{width:0;height:100%;background:#fff;-webkit-transition:width ease-out;transition:width ease-out}.vegas-timer-running .vegas-timer-progress{width:100%}.vegas-slide,.vegas-slide-inner{margin:0;padding:0;background:center center no-repeat;-webkit-transform:translateZ(0);transform:translateZ(0)}body .vegas-container{overflow:hidden!important;position:relative}.vegas-video{min-width:100%;min-height:100%;width:auto;height:auto}body.vegas-container{overflow:auto;position:static;z-index:-2}body.vegas-container>.vegas-overlay,body.vegas-container>.vegas-slide,body.vegas-container>.vegas-timer{position:fixed;z-index:-1}:root body.vegas-container>.vegas-overlay,:root body.vegas-container>.vegas-slide,_::full-page-media,_:future{bottom:-76px}.vegas-transition-fade,.vegas-transition-fade2{opacity:0}.vegas-transition-fade-in,.vegas-transition-fade2-in{opacity:1}.vegas-transition-fade2-out{opacity:0}.vegas-transition-blur,.vegas-transition-blur2{opacity:0;-webkit-filter:blur(32px);filter:blur(32px)}.vegas-transition-blur-in,.vegas-transition-blur2-in{opacity:1;-webkit-filter:blur(0px);filter:blur(0px)}.vegas-transition-blur2-out{opacity:0}.vegas-transition-flash,.vegas-transition-flash2{opacity:0;-webkit-filter:brightness(25);filter:brightness(25)}.vegas-transition-flash-in,.vegas-transition-flash2-in{opacity:1;-webkit-filter:brightness(1);filter:brightness(1)}.vegas-transition-flash2-out{opacity:0;-webkit-filter:brightness(25);filter:brightness(25)}.vegas-transition-negative,.vegas-transition-negative2{opacity:0;-webkit-filter:invert(100%);filter:invert(100%)}.vegas-transition-negative-in,.vegas-transition-negative2-in{opacity:1;-webkit-filter:invert(0);filter:invert(0)}.vegas-transition-negative2-out{opacity:0;-webkit-filter:invert(100%);filter:invert(100%)}.vegas-transition-burn,.vegas-transition-burn2{opacity:0;-webkit-filter:contrast(1000%) saturate(1000%);filter:contrast(1000%) saturate(1000%)}.vegas-transition-burn-in,.vegas-transition-burn2-in{opacity:1;-webkit-filter:contrast(100%) saturate(100%);filter:contrast(100%) saturate(100%)}.vegas-transition-burn2-out{opacity:0;-webkit-filter:contrast(1000%) saturate(1000%);filter:contrast(1000%) saturate(1000%)}.vegas-transition-slideLeft,.vegas-transition-slideLeft2{-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%)}.vegas-transition-slideLeft-in,.vegas-transition-slideLeft2-in{-webkit-transform:translateX(0%);-ms-transform:translateX(0%);transform:translateX(0%)}.vegas-transition-slideLeft2-out,.vegas-transition-slideRight,.vegas-transition-slideRight2{-webkit-transform:translateX(-100%);-ms-transform:translateX(-100%);transform:translateX(-100%)}.vegas-transition-slideRight-in,.vegas-transition-slideRight2-in{-webkit-transform:translateX(0%);-ms-transform:translateX(0%);transform:translateX(0%)}.vegas-transition-slideRight2-out{-webkit-transform:translateX(100%);-ms-transform:translateX(100%);transform:translateX(100%)}.vegas-transition-slideUp,.vegas-transition-slideUp2{-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}.vegas-transition-slideUp-in,.vegas-transition-slideUp2-in{-webkit-transform:translateY(0%);-ms-transform:translateY(0%);transform:translateY(0%)}.vegas-transition-slideDown,.vegas-transition-slideDown2,.vegas-transition-slideUp2-out{-webkit-transform:translateY(-100%);-ms-transform:translateY(-100%);transform:translateY(-100%)}.vegas-transition-slideDown-in,.vegas-transition-slideDown2-in{-webkit-transform:translateY(0%);-ms-transform:translateY(0%);transform:translateY(0%)}.vegas-transition-slideDown2-out{-webkit-transform:translateY(100%);-ms-transform:translateY(100%);transform:translateY(100%)}.vegas-transition-zoomIn,.vegas-transition-zoomIn2{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0}.vegas-transition-zoomIn-in,.vegas-transition-zoomIn2-in{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1}.vegas-transition-zoomIn2-out,.vegas-transition-zoomOut,.vegas-transition-zoomOut2{-webkit-transform:scale(2);-ms-transform:scale(2);transform:scale(2);opacity:0}.vegas-transition-zoomOut-in,.vegas-transition-zoomOut2-in{-webkit-transform:scale(1);-ms-transform:scale(1);transform:scale(1);opacity:1}.vegas-transition-zoomOut2-out{-webkit-transform:scale(0);-ms-transform:scale(0);transform:scale(0);opacity:0}.vegas-transition-swirlLeft,.vegas-transition-swirlLeft2{-webkit-transform:scale(2) rotate(35deg);-ms-transform:scale(2) rotate(35deg);transform:scale(2) rotate(35deg);opacity:0}.vegas-transition-swirlLeft-in,.vegas-transition-swirlLeft2-in{-webkit-transform:scale(1) rotate(0deg);-ms-transform:scale(1) rotate(0deg);transform:scale(1) rotate(0deg);opacity:1}.vegas-transition-swirlLeft2-out,.vegas-transition-swirlRight,.vegas-transition-swirlRight2{-webkit-transform:scale(2) rotate(-35deg);-ms-transform:scale(2) rotate(-35deg);transform:scale(2) rotate(-35deg);opacity:0}.vegas-transition-swirlRight-in,.vegas-transition-swirlRight2-in{-webkit-transform:scale(1) rotate(0deg);-ms-transform:scale(1) rotate(0deg);transform:scale(1) rotate(0deg);opacity:1}.vegas-transition-swirlRight2-out{-webkit-transform:scale(2) rotate(35deg);-ms-transform:scale(2) rotate(35deg);transform:scale(2) rotate(35deg);opacity:0}.vegas-animation-kenburns{-webkit-animation:kenburns ease-out;animation:kenburns ease-out}@-webkit-keyframes kenburns{0%{-webkit-transform:scale(1.5);transform:scale(1.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}@keyframes kenburns{0%{-webkit-transform:scale(1.5);transform:scale(1.5)}100%{-webkit-transform:scale(1);transform:scale(1)}}.vegas-animation-kenburnsUp{-webkit-animation:kenburnsUp ease-out;animation:kenburnsUp ease-out}@-webkit-keyframes kenburnsUp{0%{-webkit-transform:scale(1.5) translate(0,10%);transform:scale(1.5) translate(0,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsUp{0%{-webkit-transform:scale(1.5) translate(0,10%);transform:scale(1.5) translate(0,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsDown{-webkit-animation:kenburnsDown ease-out;animation:kenburnsDown ease-out}@-webkit-keyframes kenburnsDown{0%{-webkit-transform:scale(1.5) translate(0,-10%);transform:scale(1.5) translate(0,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsDown{0%{-webkit-transform:scale(1.5) translate(0,-10%);transform:scale(1.5) translate(0,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsLeft{-webkit-animation:kenburnsLeft ease-out;animation:kenburnsLeft ease-out}@-webkit-keyframes kenburnsLeft{0%{-webkit-transform:scale(1.5) translate(10%,0);transform:scale(1.5) translate(10%,0)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsLeft{0%{-webkit-transform:scale(1.5) translate(10%,0);transform:scale(1.5) translate(10%,0)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsRight{-webkit-animation:kenburnsRight ease-out;animation:kenburnsRight ease-out}@-webkit-keyframes kenburnsRight{0%{-webkit-transform:scale(1.5) translate(-10%,0);transform:scale(1.5) translate(-10%,0)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsRight{0%{-webkit-transform:scale(1.5) translate(-10%,0);transform:scale(1.5) translate(-10%,0)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsUpLeft{-webkit-animation:kenburnsUpLeft ease-out;animation:kenburnsUpLeft ease-out}@-webkit-keyframes kenburnsUpLeft{0%{-webkit-transform:scale(1.5) translate(10%,10%);transform:scale(1.5) translate(10%,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsUpLeft{0%{-webkit-transform:scale(1.5) translate(10%,10%);transform:scale(1.5) translate(10%,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsUpRight{-webkit-animation:kenburnsUpRight ease-out;animation:kenburnsUpRight ease-out}@-webkit-keyframes kenburnsUpRight{0%{-webkit-transform:scale(1.5) translate(-10%,10%);transform:scale(1.5) translate(-10%,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsUpRight{0%{-webkit-transform:scale(1.5) translate(-10%,10%);transform:scale(1.5) translate(-10%,10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsDownLeft{-webkit-animation:kenburnsDownLeft ease-out;animation:kenburnsDownLeft ease-out}@-webkit-keyframes kenburnsDownLeft{0%{-webkit-transform:scale(1.5) translate(10%,-10%);transform:scale(1.5) translate(10%,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsDownLeft{0%{-webkit-transform:scale(1.5) translate(10%,-10%);transform:scale(1.5) translate(10%,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}.vegas-animation-kenburnsDownRight{-webkit-animation:kenburnsDownRight ease-out;animation:kenburnsDownRight ease-out}@-webkit-keyframes kenburnsDownRight{0%{-webkit-transform:scale(1.5) translate(-10%,-10%);transform:scale(1.5) translate(-10%,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}@keyframes kenburnsDownRight{0%{-webkit-transform:scale(1.5) translate(-10%,-10%);transform:scale(1.5) translate(-10%,-10%)}100%{-webkit-transform:scale(1) translate(0,0);transform:scale(1) translate(0,0)}}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+ html,
+ body {
+ 	margin:0;
+ 	padding:0;
+ 	height:100%;
+ }
+ #wrapper {
+ 	min-height:100%;
+ 	position:relative;
+ }
+ #header {
+ 	background:#ededed;
+ 	padding:10px;
+ }
+ #content {
+ 	padding-bottom:60px; /* Height of the footer element */
+ }
+ #footer {
+ 	width:100%;
+ 	height:60px;
+ 	position:absolute;
+ 	bottom:0;
+ 	left:0;
+ }
+
+.btn-primary-form {
+  width: 25%;
+}
+
+.btn-result-form {
+  width: 25%;
+  background-color: black !important;
+}

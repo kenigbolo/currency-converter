@@ -1,0 +1,9 @@
+/* line 1, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/calculations.scss */
+body {
+  overflow: scroll !important;
+}
+
+/* line 5, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/calculations.scss */
+.btn-viewing {
+  padding: 6px 25px !important;
+}

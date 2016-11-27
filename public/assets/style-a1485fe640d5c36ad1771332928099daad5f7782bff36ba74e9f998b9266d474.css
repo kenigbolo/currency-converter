@@ -1,0 +1,1865 @@
+/* ==================== CSS Structure ====================
+
+	 * 1.0 RESET STYLES
+	 * 2.0 BOOTSTRAP FIX FOR WINPHONR 8 AND IE10
+	 * 3.0 BASIC STYLES
+	 * 4.0 TYPOGRAOHY
+	 * 5.0 PRELOADER
+	 * 6.0 VIDEO BACKGROUND
+	 * 7.0 PARALLAX BACKGROUND
+	 * 7.1 TRIANGLIFY BACKGROUND
+	 *
+	 * 8.0 HEADER
+	 * 9.0 HOME SECTION - SLIDER
+	 * 9.1 - ABOUT SECTION - SLIDER
+	 * 9.2 - SERVICES SECTION - SLIDER
+	 * 9.3 - CONTACT SECTION - SLIDER
+	 * 9.4 - TEAM SECTION - SLIDER
+	 *
+	 * 10.0 CLOCK COUNTDOWN
+	 * 11.0 FLEXSLIDERS + TEXTSLIDERS
+	 * 12.0 FORMS
+	 * 13.0 FOOTER
+	 * 14.0 SOCIALS ICONS
+	 * 15.0 BUTTONS
+	 * 16.0 OVERLAY STYLES
+	 * 17.0 BACKGROUND COLOR STYLES
+	 * 18.0 SHORTCODES STYLES
+	 * 19.0 MS IE STYLES
+	 * 20. 0MOBILE STYLES
+	 * 21.0 RESPONSIVE STYLES
+
+========================================================== */
+/* ==================== 1.0 RESET STYLES ==================== */
+/* line 39, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* ==================== 2.0 BOOTSTRAP FIX FOR WINPHONR 8 AND IE10  ==================== */
+@-webkit-viewport {
+  width: device-width;
+}
+@-moz-viewport {
+  width: device-width;
+}
+@-ms-viewport {
+  width: device-width;
+}
+@-o-viewport {
+  width: device-width;
+}
+@viewport {
+  width: device-width;
+}
+/* ==================== 3.0 BASIC STYLES ==================== */
+/* line 59, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body {
+  color: #fff;
+  background: #ffffff;
+  line-height: 1;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 28px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  white-space: normal;
+  position: relative;
+}
+
+/* line 75, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 79, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input,
+select,
+textarea {
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-family: 'Raleway', sans-serif;
+}
+
+/* ==================== 4.0 TYPOGRAOHY ==================== */
+/* line 91, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 400;
+  margin-bottom: 10px;
+  line-height: 1.2em;
+}
+
+/* line 97, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h1 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 62px;
+  position: relative;
+  margin-bottom: 0px;
+}
+
+/* line 104, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 48px;
+  position: relative;
+}
+
+/* line 110, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h3 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 30px;
+}
+
+/* line 115, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h4 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 25px;
+}
+
+/* line 120, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h5 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+}
+
+/* line 125, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+h6 {
+  font-family: 'Raleway', sans-serif;
+  font-size: 18px;
+}
+
+/* line 130, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+p {
+  margin-bottom: 20px;
+}
+
+/* line 134, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+p.lead {
+  font-family: 'Raleway', sans-serif;
+  font-size: 21px;
+  padding: 0;
+  font-weight: 400;
+}
+
+/*, a > * {
+	cursor: pointer;
+	text-decoration: none;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	transition: all .3s ease-in-out;
+}*/
+/* line 151, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+a:hover, a > *:hover, a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 155, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+ul {
+  list-style: none;
+}
+
+/* line 158, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+em {
+  font-style: italic;
+}
+
+/* line 162, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 166, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* line 172, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.color-white {
+  color: #fff;
+}
+
+/* ==================== 5.0 PRELOADER ==================== */
+/* line 179, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ffffff;
+  z-index: 10001;
+}
+
+/* line 189, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#loading-animation {
+  width: 120px;
+  height: 128px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(/assets/loading-animation-d35536e158862aee6858cd1e8ab25001532ed7672b71d8204cd11017a27bc7bf.GIF);
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: -60px 0 0 -64px;
+}
+
+/* ==================== 6.0 VIDEO BACKGROUND ==================== */
+/* line 203, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.youtube-background {
+  background-color: #000;
+}
+
+/* line 207, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#video_background {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+/* ==================== 7.0 PARALLAX BACKGROUND ==================== */
+/* line 223, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.parallax-wallpaper {
+  left: -25%;
+  top: -25%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: -999999;
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  background-image: url(../images/bg/parallax-bg.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* ==================== 7.1 TRIANGLIFY BACKGROUND ==================== */
+/* line 240, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#gradient {
+  left: -25%;
+  top: -25%;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  z-index: -999999;
+  position: fixed;
+  width: 150%;
+  height: 150%;
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+
+/* ==================== 8.0 HEADER ==================== */
+/* line 256, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.logo-site {
+  margin: auto;
+  width: 100%;
+  vertical-align: middle;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 264, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.logo-site img {
+  display: block;
+  margin: 0 auto;
+}
+
+/* line 269, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.title-section {
+  text-align: center;
+  letter-spacing: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  color: #fff;
+  font-weight: 300;
+  position: relative;
+}
+
+/* line 282, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.header-section {
+  padding-bottom: 0px;
+}
+
+/* ==================== 9.0 HOME SECTION - SLIDER ==================== */
+/* line 287, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site {
+  position: relative;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  display: block;
+  padding: 150px 80px;
+  margin: 0;
+  z-index: 10;
+}
+
+/* line 298, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container-section {
+  z-index: 10;
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 100%;
+  height: 100px;
+}
+
+/* line 307, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container-table {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+/* line 312, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site .container {
+  width: auto;
+}
+
+/* line 316, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1 {
+  margin-top: 30px;
+}
+
+/* line 320, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1,
+.main-site h2,
+.main-site h3,
+.main-site h4,
+.main-site h5,
+.main-site h6 {
+  font-weight: 400;
+  margin-bottom: 30px;
+}
+
+/* line 330, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h1 {
+  font-size: 52px;
+}
+
+/* line 334, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h2 {
+  font-size: 42px;
+}
+
+/* line 338, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.main-site h3 {
+  font-size: 30px;
+}
+
+/* line 342, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.content-slide {
+  color: #fff;
+}
+
+/* line 345, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-slide {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: none;
+}
+
+/* line 351, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-slide.active {
+  display: block;
+}
+
+/* ==================== 9.1 ABOUT SECTION - SLIDER ==================== */
+/* line 357, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.aboutus {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* line 362, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.aboutus p {
+  text-align: left;
+  letter-spacing: 0.5px;
+  line-height: 25px;
+  padding-top: 35px;
+}
+
+/* line 368, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.pregress-bar {
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+}
+
+/* line 373, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.category-name {
+  float: left;
+  color: #fff;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* line 383, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.progress-status {
+  float: right;
+  color: #fff;
+  font-size: 1em;
+}
+
+/* line 388, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.skill-bar {
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: #fff;
+  clear: both;
+  margin: 20px 0;
+}
+
+/* line 397, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.skill-level {
+  display: table;
+  height: 5px;
+}
+
+/* line 401, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.planning, .programming, .developing, .supporting, .marketing {
+  background: #666;
+}
+
+/* line 404, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.about-heading h1 {
+  color: #e1e1e1 !important;
+}
+
+/* line 407, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.planning {
+  width: 90%;
+  -webkit-animation: planning 3s linear;
+  animation: planning 3s linear;
+}
+
+/* line 412, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.programming {
+  width: 80%;
+  -webkit-animation: programming 3s linear;
+  animation: programming 3s linear;
+}
+
+/* line 418, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.developing {
+  width: 70%;
+  -webkit-animation: developing 3s linear;
+  animation: developing 3s linear;
+}
+
+/* line 423, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.supporting {
+  width: 85%;
+  -webkit-animation: supporting 3s linear;
+  animation: supporting 3s linear;
+}
+
+/* line 428, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.marketing {
+  width: 70%;
+  -webkit-animation: marketing 3s linear;
+  animation: marketing 3s linear;
+}
+
+@-webkit-keyframes planning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@keyframes planning {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 90%;
+  }
+}
+@-webkit-keyframes programming {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@keyframes programming {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 80%;
+  }
+}
+@-webkit-keyframes developing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes developing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@-webkit-keyframes supporting {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@keyframes supporting {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 85%;
+  }
+}
+@-webkit-keyframes marketing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+@keyframes marketing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 70%;
+  }
+}
+/* line 485, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-section {
+  position: relative;
+}
+
+/* line 488, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-video {
+  padding: 50px;
+}
+
+/* line 492, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-content iframe {
+  border: 0 !important;
+}
+
+/* line 495, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+iframe {
+  width: 450px;
+  height: 400px;
+  /*-webkitallowfullscreen : width:450px; height:400px;
+  -mozallowfullscreen : width:450px; height:400px;
+  -allowfullscreen : width:450px; height:400px;*/
+}
+
+/* ==================== 9.2 SERVICES SECTION - SLIDER ==================== */
+/* line 505, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+/* line 510, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-icon {
+  font-size: 40px;
+  color: #fff;
+  float: left;
+  width: 60px;
+  text-align: center;
+}
+
+/* line 518, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-icon:hover,
+.service-icon:focus {
+  color: #000;
+  background: #fff;
+  transition: all 1s;
+  transform: rotate(360deg);
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #000;
+}
+
+/* line 530, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.service-text {
+  margin-left: 70px;
+}
+
+/* line 534, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service h3 {
+  font-size: 21px;
+  margin-bottom: 10px;
+}
+
+/* line 538, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.item-service h3:hover,
+.item-service h3:focus {
+  color: #999;
+}
+
+/* ==================== 9.3 CONTACT SECTION - SLIDER ==================== */
+/* line 547, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.maps-section {
+  position: relative;
+}
+
+/* line 550, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps {
+  padding: 50px;
+}
+
+/* line 553, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps ul {
+  padding-left: 50px;
+  padding-bottom: 20px;
+}
+
+/* line 557, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps li {
+  text-align: left;
+}
+
+/* line 561, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.big-maps li span {
+  color: #CCC;
+}
+
+/* line 564, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.maps-content {
+  border: 0 !important;
+}
+
+/* line 568, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.video-section {
+  position: relative;
+}
+
+/* line 572, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#map1 {
+  width: 450px;
+  height: 400px;
+  /*-webkit: width:450px; height:400px;
+  -moz: width:450px; height:400px;*/
+}
+
+/* ==================== 9.4 TEAM SECTION - SLIDER ==================== */
+/* line 581, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel {
+  background: rgba(84, 82, 82, 0.56);
+  text-align: center;
+  border: 2px solid #fff;
+}
+
+/* line 587, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel img {
+  margin: 20px auto;
+}
+
+/* line 591, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel img:hover, img:focus {
+  color: rgba(255, 255, 255, 0.43);
+}
+
+/* line 595, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.panel a i {
+  margin-left: 5px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* ==================== 10.0 CLOCK COUNTDOWN ==================== */
+/* line 604, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown {
+  color: #fff;
+  overflow: hidden;
+}
+
+/* line 609, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.counter-container {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 614, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown .counter-box {
+  display: block;
+  width: 160px;
+  text-align: center;
+  overflow: hidden;
+  padding: 10px 25px;
+  float: left;
+  margin: 25px 0;
+  position: relative;
+}
+
+/* line 625, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown .number {
+  font-size: 80px;
+  text-align: center;
+  font-family: 'Monteserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 10px;
+}
+
+/* line 634, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown span {
+  display: block;
+  font-size: 21px;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  padding-top: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 645, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+#clock-countdown span:before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 30px;
+  height: 1px;
+  background: #fff;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 0px;
+}
+
+/* ==================== 11.0 FLEXSLIDERS + TEXTSLIDERS ==================== */
+/* line 660, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.flexslider.textslider {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background: transparent;
+  border: 0px solid #fff;
+  position: relative;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -o-border-radius: 0px;
+  border-radius: 0px;
+  -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+
+/* line 677, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h1,
+.textslider h2,
+.textslider h3 {
+  text-transform: uppercase;
+}
+
+/* line 683, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h1 {
+  font-size: 82px;
+}
+
+/* line 687, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h2 {
+  font-size: 58px;
+}
+
+/* line 691, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.textslider h3 {
+  font-size: 40px;
+}
+
+/* ==================== 12.0 FORMS ==================== */
+/* line 697, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input, textarea, select {
+  background: rgba(255, 255, 255, 0.9);
+  outline: none;
+  -webkit-appearance: none;
+  color: #333;
+  padding: 11px 25px;
+  margin: 0px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.42857143;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -o-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 2px solid #fff;
+}
+
+/* line 726, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+textarea {
+  width: 100%;
+  padding: 10px 20px;
+  resize: both;
+  margin-top: 0px;
+  font-style: italic;
+  height: 150px;
+}
+
+/* line 735, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:hover, textarea:hover, select:hover {
+  color: #333;
+}
+
+/* line 739, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:focus, textarea:focus, select:focus {
+  color: #333;
+}
+
+/* line 743, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[type="submit"], button {
+  width: auto;
+  font-style: normal;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  border: 1px solid #fff;
+  padding: 12px 20px;
+}
+
+/* line 753, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[type="submit"]:hover, button:hover {
+  color: #333;
+}
+
+/* line 757, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+select, option {
+  cursor: pointer;
+}
+
+/* line 761, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #333;
+}
+
+/* line 763, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #333;
+}
+
+/* line 765, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input.placeholder, textarea.placeholder {
+  color: #333;
+}
+
+/* line 767, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input[placeholder] {
+  text-overflow: ellipsis;
+}
+
+/* line 769, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+::-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+/* firefox 19+ */
+/* line 771, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+input:-moz-placeholder {
+  text-overflow: ellipsis;
+}
+
+/* line 773, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.form {
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 778, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.container-form {
+  padding-top: 40px;
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 30px;
+}
+
+/* line 785, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.note-form {
+  color: #333;
+  font-style: italic;
+  margin: 24px 0;
+}
+
+/* line 791, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-success {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+
+/* line 799, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-error {
+  padding-top: 10px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  display: none;
+}
+
+/* line 807, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.message-success,
+.message-error {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* line 814, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input[type="text"], .contact-form input[type="email"] {
+  width: 100%;
+}
+
+/* line 818, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input, .contact-form textarea, .contact-form select {
+  background: transparent;
+  outline: none;
+  -webkit-appearance: none;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 9px 20px;
+  margin: 0px;
+  font-style: italic;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  height: auto;
+  margin-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -moz-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -ms-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  -o-transition: background-color .3s ease, border .3s ease, color .3s ease;
+  transition: background-color .3s ease, border .3s ease, color .3s ease;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* line 846, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form textarea {
+  margin-bottom: 18px;
+}
+
+/* line 850, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form .input-error {
+  border-color: #ed5555;
+}
+
+/* line 854, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form .response-message {
+  margin: 20px 0 30px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #fff;
+}
+
+/* WebKit browsers */
+/* line 862, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form input::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+/* line 866, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 1;
+}
+
+/* line 870, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #fff;
+  opacity: 1;
+}
+
+/* line 874, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.contact-form :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  color: #fff;
+}
+
+/* line 879, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form {
+  display: table;
+  margin: 0 auto;
+}
+
+/* line 884, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form input {
+  float: left;
+  display: inline-block;
+  border: none;
+}
+
+/* line 890, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form input[type="email"] {
+  min-width: 270px;
+}
+
+/* line 894, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.sign-up-sign-in-form button {
+  margin: 0 5px;
+  float: left;
+}
+
+/* line 898, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.top-margin {
+  margin-top: 0 !important;
+}
+
+/* line 901, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bottom-margin {
+  margin-bottom: 0 !important;
+}
+
+/* ==================== 13.0 FOOTER ==================== */
+/* line 907, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.copy-right {
+  background: transparent;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  z-index: 10000;
+  width: 100%;
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  -webkit-transition: position .5s ease;
+  -moz-transition: position .5s ease;
+  -ms-transition: position .5s ease;
+  -o-transition: position .5s ease;
+  transition: position .5s ease;
+}
+
+/* line 924, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.copyright {
+  line-height: 80px;
+  padding-left: 15px;
+}
+
+/* ==================== 14.0 SOCIALS ICONS ==================== */
+/* line 930, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons {
+  position: relative;
+  display: block;
+  margin: 0;
+  width: auto;
+  height: auto;
+  top: auto;
+  bottom: auto;
+  right: auto;
+  z-index: 10;
+}
+
+/* line 942, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons ul {
+  margin: 0 auto;
+  text-align: center;
+  display: table;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+/* line 950, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li {
+  margin: 0;
+  display: block;
+  float: left;
+}
+
+/* line 956, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a {
+  display: block;
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+}
+
+/* line 963, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a i {
+  color: #fff;
+  line-height: 70px;
+  font-size: 21px;
+}
+
+/* line 969, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.socials-icons li a:hover i {
+  color: #999;
+}
+
+/* ==================== 15.0 BUTTONS ==================== */
+/* line 975, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.default-button:focus,
+.sm-button:focus,
+.border-button:focus,
+.border-sm-button:focus {
+  outline: none;
+  outline-offset: 0px;
+  text-decoration: none;
+}
+
+/* line 987, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button {
+  display: inline-block !important;
+  background: #fff;
+  -webkit-border-radius: 27px;
+  -moz-border-radius: 27px;
+  border-radius: 27px;
+  padding: 9px 50px;
+  color: #333;
+  line-height: 22px;
+  font-size: 16px;
+  outline: none;
+  outline-offset: 0px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* line 1009, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button:hover,
+.default-button:focus {
+  color: #333;
+  opacity: 0.8;
+}
+
+/* line 1015, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.default-button i,
+.default-button:hover i,
+.default-button:focus i {
+  color: #333;
+}
+
+/* line 1021, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button {
+  display: inline-block !important;
+  background: transparent;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 9px 50px;
+  color: #fff;
+  line-height: 22px;
+  font-size: 16px;
+  outline: none;
+  outline-offset: 0px;
+  font-weight: 400;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 2px solid #fff;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+}
+
+/* line 1044, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button:hover,
+.border-button:focus {
+  background: #fff;
+  color: #333;
+  opacity: 0.8;
+}
+
+/* line 1051, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.border-button i,
+.border-button:hover i,
+.border-button:focus i {
+  color: #333;
+}
+
+/* Transparent */
+/* line 1058, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent {
+  background: transparent;
+  color: #fff;
+}
+
+/* line 1063, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent:hover,
+.bt-transparent:focus {
+  color: #fff;
+  opacity: 0.8;
+}
+
+/* line 1069, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.bt-transparent i,
+.bt-transparent:hover i,
+.bt-transparent:focus i {
+  color: #fff;
+}
+
+/* ==================== 16.0 OVERLAY STYLES ==================== */
+/* line 1079, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  overflow: auto;
+}
+
+/* line 1095, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay {
+  background: rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ==================== 17.0 BACKGROUND COLOR STYLES ==================== */
+/* line 1102, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.white-background {
+  background: #fff;
+}
+
+/* line 1105, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.dark-background {
+  background: #333;
+}
+
+/* line 1108, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.grey-background {
+  background: #666;
+}
+
+/* line 1111, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.blue-background {
+  background: #0b4ac8;
+}
+
+/* line 1114, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.blue-dark-background {
+  background: #052a75;
+}
+
+/* line 1117, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.brown-background {
+  background: #9C8061;
+}
+
+/* line 1120, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.red-background {
+  background: #FC331C;
+}
+
+/* line 1123, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.orange-background {
+  background: #EA8825;
+}
+
+/* line 1126, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.green-background {
+  background: #00AB66;
+}
+
+/* line 1129, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.violet-background {
+  background: #8C489F;
+}
+
+/* line 1132, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.yellow-background {
+  background: #E5C41A;
+}
+
+/* ==================== 18.0 SHORTCODES STYLES ==================== */
+/* line 1139, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate {
+  display: block;
+  margin-bottom: 30px;
+  width: 120px;
+  height: 18px;
+  position: relative;
+}
+
+/* line 1147, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate span {
+  display: block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+/* line 1156, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate:before {
+  content: '';
+  display: block;
+  position: relative;
+  top: 8px;
+  width: 50px;
+  height: 2px;
+  margin: 0 !important;
+  float: left;
+}
+
+/* line 1167, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-separate:after {
+  content: '';
+  display: block;
+  position: relative;
+  top: -10px;
+  width: 50px;
+  height: 2px;
+  margin: 0 !important;
+  float: right;
+}
+
+/* line 1178, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-white:before,
+.line-white:after {
+  background: #fff;
+}
+
+/* line 1183, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-white span {
+  box-shadow: inset 0px 0px 0px 2px #fff;
+}
+
+/* line 1187, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-center,
+.line-center:before,
+.line-center:after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 1194, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.line-center span:before,
+.line-center span:after {
+  width: 90px;
+}
+
+/* ==================== 19.0 MS IE STYLES ==================== */
+/* line 1201, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.ie-10 .logo-site,
+.ie-11 .logo-site {
+  padding-top: 10px;
+  display: block;
+}
+
+@media (min-width: 769px) {
+  /* line 1208, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .ie-10 .header-site,
+  .ie-11 .header-site {
+    display: block !important;
+  }
+
+  /* line 1213, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .ie-10 .default-button,
+  .ie-11 .default-button,
+  .ie-10 .border-button,
+  .ie-11 .border-button {
+    display: inline-block !important;
+  }
+}
+/* ==================== 20.0 MOBILE STYLES ==================== */
+/* line 1224, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body.mobile {
+  -webkit-text-size-adjust: none;
+}
+
+/* line 1228, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+body.mobile .animated {
+  display: block;
+  visibility: visible;
+}
+
+/* line 1233, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.windowsphone .logo-site,
+.windowsphone .logo-site img {
+  display: block !important;
+  visibility: visible !important;
+  margin: 0 auto !important;
+}
+
+/* ==================== 21.0 RESPONSIVE STYLES ==================== */
+@media (min-width: 1300px) {
+  /* line 1244, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 991px) {
+  /* line 1251, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .page-container {
+    display: block;
+    vertical-align: middle;
+  }
+
+  /* line 1256, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site.fullscreen {
+    display: block;
+    height: auto;
+    padding: 200px 80px;
+  }
+
+  /* line 1262, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h1 {
+    font-size: 50px;
+  }
+
+  /* line 1266, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h2 {
+    font-size: 44px;
+  }
+
+  /* line 1270, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  h3 {
+    font-size: 22px;
+  }
+
+  /* line 1273, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 30px;
+  }
+
+  /* line 1276, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 100px;
+  }
+
+  /* line 1279, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 120px;
+  }
+
+  /* line 1282, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #clock-countdown .counter-box {
+    width: 170px;
+    padding: 15px 15px;
+  }
+
+  /* line 1286, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: auto;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 10;
+  }
+
+  /* line 1298, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1306, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  /* line 1312, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-right: 0px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  /* line 1321, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a i {
+    color: #fff;
+    line-height: 80px;
+    font-size: 21px;
+  }
+
+  /* line 1326, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 300px;
+  }
+}
+@media (max-width: 768px) {
+  /* line 1335, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .section {
+    text-align: center !important;
+  }
+
+  /* line 1339, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .header-section,
+  .tour-header {
+    padding-bottom: 40px;
+  }
+
+  /* line 1344, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .fullscreen .section-container {
+    display: block;
+  }
+
+  /* line 1348, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .section-container {
+    display: block;
+    height: auto;
+  }
+
+  /* line 1353, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site .container-table {
+    display: block;
+  }
+
+  /* line 1357, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form input,
+  .sign-up-sign-in-form button {
+    float: none;
+  }
+
+  /* line 1362, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form button {
+    margin-top: 20px;
+  }
+
+  /* line 1366, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .line-separate,
+  .line-separate span:before,
+  .line-separate span:after {
+    margin: 0 auto;
+  }
+
+  /* line 1372, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .line-separate span:before,
+  .line-separate span:after {
+    width: 90px !important;
+  }
+
+  /* line 1377, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .counter-container {
+    max-width: 100%;
+    width: auto;
+    margin: 0 auto;
+    border-left: 0;
+    border-right: 0;
+    padding: 0px;
+  }
+
+  /* line 1386, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #clock-countdown .counter-box {
+    width: 100%;
+    float: none;
+    border: none;
+  }
+
+  /* line 1392, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons {
+    position: relative;
+    display: block;
+    margin: 0;
+    width: auto;
+    height: auto;
+    top: auto;
+    bottom: auto;
+    right: auto;
+    z-index: 10;
+  }
+
+  /* line 1404, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1412, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0;
+    display: block;
+    float: left;
+  }
+
+  /* line 1418, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-right: 0px solid transparent;
+    border-bottom: 1px solid transparent;
+  }
+
+  /* line 1427, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li a i {
+    color: #fff;
+    line-height: 80px;
+    font-size: 21px;
+  }
+
+  /* line 1433, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h1 {
+    font-size: 62px;
+  }
+
+  /* line 1437, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h2 {
+    font-size: 48px;
+  }
+
+  /* line 1441, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .textslider h3 {
+    font-size: 30px;
+  }
+
+  /* line 1445, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .item-service {
+    text-align: center;
+  }
+
+  /* line 1449, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .service-icon {
+    float: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 1455, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .service-text {
+    margin-left: 0;
+  }
+
+  /* line 1458, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 100px;
+  }
+
+  /* line 1461, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 20px;
+  }
+
+  /* line 1464, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 100px;
+  }
+
+  /* line 1467, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  iframe {
+    width: 350px;
+    height: 300px;
+  }
+
+  /* line 1471, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #map1 {
+    width: 350px;
+    height: 300px;
+  }
+
+  /* line 1475, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 250px;
+  }
+}
+@media (max-width: 640px) {
+  /* line 1483, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form input[type="email"] {
+    min-width: 200px;
+  }
+
+  /* line 1487, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .sign-up-sign-in-form button {
+    min-width: 150px;
+  }
+
+  /* line 1491, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .copyright {
+    line-height: 50px;
+  }
+
+  /* line 1494, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps ul {
+    padding-left: 20px;
+  }
+
+  /* line 1497, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  iframe {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* line 1501, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  #map1 {
+    width: 250px;
+    height: 200px;
+  }
+
+  /* line 1505, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-video {
+    padding: 10px;
+  }
+
+  /* line 1508, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .big-maps {
+    padding: 50px;
+  }
+
+  /* line 1511, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .main-site.fullscreen {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  /* line 1516, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons ul {
+    margin: 0 auto;
+    text-align: center;
+    display: table;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+
+  /* line 1524, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .socials-icons li {
+    margin: 0px 10px;
+    display: inline-block;
+    float: none;
+  }
+
+  /* line 1529, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+  .text-primary {
+    margin-left: 20px;
+  }
+}
+/* ==================== 22.0 GRAPH PAGES BACKGROUND COLOR STYLES ==================== */
+/* line 1536, /home/kenigbolo/Desktop/currency-coverter/app/assets/stylesheets/style.scss */
+.section-overlay-modify {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-transition: all .3s ease-in-out;
+  -moz-transition: all .3s ease-in-out;
+  -ms-transition: all .3s ease-in-out;
+  -o-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  background: linear-gradient(11deg, #3ed9b1, #2a8a8a, #36dcdd, #3692dd);
+  background-size: 800% 800%;
+  overflow: auto !important;
+  -webkit-animation: AnimationName 30s ease infinite;
+  -moz-animation: AnimationName 30s ease infinite;
+  animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
