@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-### Test for creating an account
 require 'spec_helper'
 require 'rails_helper'
 

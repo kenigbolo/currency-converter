@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-# rubocop:disable Style/RegexpLiteral
 require 'rails_helper'
 require 'spec_helper'
 require 'selenium-webdriver'

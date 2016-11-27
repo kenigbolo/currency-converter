@@ -1,5 +1,6 @@
 # frozen_string_literal: true
-# rubocop:disable Lint/AssignmentInCondition:
+# rubocop:disable Lint/AssignmentInCondition, LineLength
+# ! User Model
 class User < ApplicationRecord
   has_many :calculations
   validates_format_of :username, with: /^[a-zA-Z0-9_\.]*$/, multiline: true

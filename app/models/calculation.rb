@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# rubocop:disable LineLength, MutableConstant
+# ! Calculation Model
 class Calculation < ApplicationRecord
   include HTTParty
   DEFAULT_DATE = (Date.today - 25).to_s
@@ -25,12 +27,12 @@ class Calculation < ApplicationRecord
     self
   end
 
-  def get_previous!
+  def retrieve_previous!
     response = HTTParty.get("http://fixer-node-api.herokuapp.com/#{DEFAULT_DATE}?base=#{base_currency}")
     response.body
   end
 
-  def get_current!
+  def retrieve_current!
     response = HTTParty.get("http://fixer-node-api.herokuapp.com/latest?base=#{base_currency}")
     response.body
   end

@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# ! MIgration file for currencies
 class CreateCurrencies < ActiveRecord::Migration[5.0]
   def change
     create_table :currencies do |t|

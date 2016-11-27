@@ -1,6 +1,5 @@
 # frozen_string_literal: true
-# rubocop:disable MethodLength
-# rubocop:disable Metrics/AbcSize
+# rubocop:disable MethodLength, Style/GuardClause, Metrics/AbcSize
 # ! Calculation controller methods
 class CalculationsController < ApplicationController
   PER_PAGE = 5

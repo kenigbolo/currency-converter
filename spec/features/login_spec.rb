@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable LineLength
 require 'rails_helper'
 require 'spec_helper'
 

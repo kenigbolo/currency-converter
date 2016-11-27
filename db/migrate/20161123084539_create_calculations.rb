@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# ! Migration file for Calculations
 class CreateCalculations < ActiveRecord::Migration[5.0]
   def change
     create_table :calculations do |t|

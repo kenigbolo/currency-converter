@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable LineLength, Metrics/AbcSize
 module ControllerHelpers
   def sign_in(user = double('user'))
     if user.nil?

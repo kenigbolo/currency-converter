@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# ! Migration file for results
 class CreateResults < ActiveRecord::Migration[5.0]
   def change
     create_table :results do |t|

@@ -1,4 +1,6 @@
 # frozen_string_literal: true
+# rubocop:disable LineLength, MethodLength
+# ! Migration File for Devise Users
 class DeviseCreateUsers < ActiveRecord::Migration[5.0]
   def change
     create_table :users do |t|

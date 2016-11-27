@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# rubocop:disable LineLength
 require 'rails_helper'
 
 RSpec.describe Result, type: :model do

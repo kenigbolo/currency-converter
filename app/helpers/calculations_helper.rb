@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-# rubocop:disable Lint/Eval
+# rubocop:disable Lint/Eval, Style/GuardClause, LineLength
 # Helper methods for calculation go in here
 module CalculationsHelper
   def get_result(calc_to_convert)
@@ -65,7 +65,7 @@ module CalculationsHelper
   end
 
   def current(calc_to_convert)
-    current = eval(calc_to_convert.get_current!)
+    current = eval(calc_to_convert.retrieve_current!)
     Calculation::RATES.push(current)
     current
   end
@@ -91,7 +91,7 @@ module CalculationsHelper
   end
 
   def previous(calc_to_convert)
-    previous = eval(calc_to_convert.get_previous!)
+    previous = eval(calc_to_convert.retrieve_previous!)
     Calculation::RATES.push(previous)
     previous
   end

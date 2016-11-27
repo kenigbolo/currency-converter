@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+# ! Result Model
 class Result < ApplicationRecord
   belongs_to :calculation
   serialize :value, Hash
