@@ -21,7 +21,7 @@ module Helpers
   end
 
   def calculate
-    visit root_path
+    visit '/'
     find('#calculation_amount').set SecureRandom.random_number(25000)
     find('#calculation_amount').set SecureRandom.random_number(25000)
     find('#calculation_num_of_days').set SecureRandom.random_number(25000)
