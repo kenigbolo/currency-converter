@@ -7,6 +7,22 @@ RSpec.describe User, type: :model do
       end
     end
 
+    context "User from omniauth" do
+      describe ".from_omniauth" do
+        it "is expected to be_valid" do
+          user = omniauth
+          expect(user).to be_valid
+        end
+      end
+
+      describe ".from_omniauth" do
+        it "saves new user" do
+          omniauth
+          expect(User.all).should_not be_nil
+        end
+      end
+    end
+
     before :each do
       @user = FactoryGirl.build(:user)
     end

@@ -28,4 +28,14 @@ module Helpers
     select "EUR", :from => "calculation_base_currency"
     select "USD", :from => "calculation_conversion_currency"
   end
+
+  def omniauth
+    user = User.new
+    user.provider = 'github'
+    user.uid = SecureRandom.hex
+    user.username = Faker::Internet.user_name
+    user.email = Faker::Internet.email
+    user.save!
+    user
+  end
 end
