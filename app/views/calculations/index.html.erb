@@ -1,3 +1,4 @@
+<% javascript_include_tag "application" %>
 <!-- Overlay -->
 <div id="section-home" class="home-section-wrap center">
 	<div class="section-overlay"></div>
@@ -59,8 +60,12 @@
 															      <td><%= calculation.num_of_days %> weeks</td>
 															      <td><%= button_to 'view', calculation_path(calculation), method: :get, class: 'btn-viewing' %></td>
 																		<% if calculation.user == current_user %>
-																		<td><%= button_to 'edit', edit_calculation_path(calculation), method: :get, class: 'btn-viewing' %></td>
-																		<td><%= button_to 'delete', calculation_path(calculation), method: :delete, class: 'btn-viewing' %></td>
+																		<td>
+																			<%= button_to 'edit', edit_calculation_path(calculation), method: :get, class: 'btn-viewing' %>
+																		</td>
+																		<td>
+																			<%= button_to 'delete', calculation_path(calculation), method: :delete, class: 'btn-viewing' %>
+																		</td>
 																		<% end %>
 															    </tr>
 															  </tbody>
