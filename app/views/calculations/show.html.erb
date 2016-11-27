@@ -1,3 +1,4 @@
+<% unless Rails.env.test?%>
 <%= javascript_include_tag "https://www.google.com/jsapi", "chartkick" %>
 <!-- header -->
 <header class="header-site">
@@ -101,3 +102,4 @@
   <!-- /main -->
 </div>
 <%= render 'full_list'%>
+<% end %>

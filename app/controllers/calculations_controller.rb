@@ -48,7 +48,6 @@ class CalculationsController < ApplicationController
   def show
     @calculation = Calculation.find_by(id: params[:id])
     @result = Result.find_by(calculation_id: @calculation.id)
-    @top_three = @result.top_three!
   end
 
   def destroy
