@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 # rubocop:disable LineLength
-require 'simplecov'
 SimpleCov.start
 require 'codecov'
 SimpleCov.formatter = SimpleCov::Formatter::Codecov
