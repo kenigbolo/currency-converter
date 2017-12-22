@@ -57,11 +57,8 @@ module CalculationsHelper
   # Helpers for current rate
   def check_current_rate(calc_to_convert)
     base = calc_to_convert.base_currency
-    if Calculation::RATES.empty?
-      return current(calc_to_convert)
-    else
-      return current_rate(base, calc_to_convert)
-    end
+    return current(calc_to_convert) if Calculation::RATES.empty?
+    current_rate(base, calc_to_convert)
   end
 
   def current(calc_to_convert)
@@ -72,22 +69,16 @@ module CalculationsHelper
 
   def current_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
-      if rate[:base] == base && rate[:date] == Date.today.to_s
-        return rate
-      else
-        return current(calc_to_convert)
-      end
+      return rate if (rate[:base] == base) && (rate[:date] == Date.today.to_s)
+      current(calc_to_convert)
     end
   end
 
   # Helpers for previous rates
   def check_previous_rate(calc_to_convert)
     base = calc_to_convert.base_currency
-    if Calculation::RATES.empty?
-      return previous(calc_to_convert)
-    else
-      return previous_rate(base, calc_to_convert)
-    end
+    return previous(calc_to_convert) if Calculation::RATES.empty?
+    previous_rate(base, calc_to_convert)
   end
 
   def previous(calc_to_convert)
@@ -98,21 +89,15 @@ module CalculationsHelper
 
   def previous_rate(base, calc_to_convert)
     Calculation::RATES.each do |rate|
-      if rate[:base] == base && rate[:date] == Calculation::DEFAULT_DATE
-        return rate
-      else
-        return previous(calc_to_convert)
-      end
+      return rate if (rate[:base] == base) && (rate[:date] == Calculation::DEFAULT_DATE)
+      previous(calc_to_convert)
     end
   end
 
   # Helpers for calculation view
   def exchange_total_amount(calculation, result)
-    if result.class == Array
-      (result.second * calculation.amount).round(2)
-    else
-      (result * calculation.amount).round(2)
-    end
+    return (result.second * calculation.amount).round(2) if result.class == Array
+    (result * calculation.amount).round(2)
   end
 
   def profit_loss(calculation, result)
