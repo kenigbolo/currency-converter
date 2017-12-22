@@ -96,7 +96,7 @@ module CalculationsHelper
 
   # Helpers for calculation view
   def exchange_total_amount(calculation, result)
-    return (result.second * calculation.amount).round(2) if result.class == Array
+    return (result.second * calculation.amount).round(2) if result.kind_of?(Array)
     (result * calculation.amount).round(2)
   end
 
