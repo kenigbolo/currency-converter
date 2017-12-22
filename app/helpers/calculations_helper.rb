@@ -62,7 +62,7 @@ module CalculationsHelper
   end
 
   def current(calc_to_convert)
-    current = eval(calc_to_convert.retrieve_current!)
+    current = JSON.parse (calc_to_convert.retrieve_current!)
     Calculation::RATES.push(current)
     current
   end
@@ -82,7 +82,7 @@ module CalculationsHelper
   end
 
   def previous(calc_to_convert)
-    previous = eval(calc_to_convert.retrieve_previous!)
+    previous = JSON.parse (calc_to_convert.retrieve_previous!)
     Calculation::RATES.push(previous)
     previous
   end
