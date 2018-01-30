@@ -2,11 +2,11 @@
 
 [![Build Status](https://travis-ci.org/kenigbolo/currency-converter.png)](https://travis-ci.org/kenigbolo/currency-converter)
 
-##Getting Started
+## Getting Started
 
 + Clone the application with `git clone https://github.com/kenigbolo/currency-converter.git` or use ssh  `git clone git@github.com:kenigbolo/currency-converter.git`.
 
-##Dependencies
+## Dependencies
 
 * Ruby version 2.3.1 and above
 * rails 5.0.0
@@ -52,7 +52,7 @@ to the top of `spec_helper.rb`
 to the top of the `bin/rails` file
 * Run `rspec spec` and visit the `coverage/index.html` to view the coverage report.
 
-##Application Main Features
+## Application Main Features
 
 * Authentication (Devise & Github)
 * Currency exchange rate prediction
@@ -60,11 +60,11 @@ to the top of the `bin/rails` file
 * Graphical display of prediction
 * CRUD possibility for calculations
 
-##Database
+## Database
 * Development Environment
     Uses Sqlite
 * Production environment
     Uses Postgres
 
-##Availability
+## Availability
 * This project is available on [Heroku](https://currency-predictor.herokuapp.com)
