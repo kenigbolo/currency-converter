@@ -12,7 +12,7 @@ gem 'devise'
 gem 'rubocop', require: false
 gem 'omniauth'
 gem 'omniauth-github'
-gem 'httparty', '~> 0.16'
+gem 'httparty', '~> 0.17'
 gem 'chartkick'
 gem 'figaro'
 gem 'kaminari'
