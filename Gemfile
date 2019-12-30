@@ -27,7 +27,7 @@ group :development, :test do
 end
 
 group :test do
-  gem 'selenium-webdriver', '3.142.6'
+  gem 'selenium-webdriver', '3.142.7'
   gem 'rails-controller-testing'
 end
 group :production do
