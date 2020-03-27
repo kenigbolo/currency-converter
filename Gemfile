@@ -19,7 +19,7 @@ gem 'kaminari'
 
 group :development, :test do
   gem 'byebug', platform: :mri
-  gem 'rspec-rails', '~> 3.9'
+  gem 'rspec-rails', '~> 4.0'
   gem 'factory_girl_rails'
   gem 'capybara'
   gem 'faker'
